@@ -44,7 +44,7 @@ export default withNavigationContext(({ fullpage }) => {
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={275}
+      startupDelay={750}
       animation={animation}
       className="awesome-slider"
       onTransitionEnd={() => {
@@ -52,6 +52,13 @@ export default withNavigationContext(({ fullpage }) => {
         if (isFirstLoad.current === true) {
           document.querySelector("body").classList.add("animated");
           document.querySelector("body").classList.add("visible");
+        }
+      }}
+      onTransitionStart={() => {
+        // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
+        if (isFirstLoad.current === true) {
+          document.querySelector("body").classList.remove("animated");
+          document.querySelector("body").classList.remove("visible");
         }
       }}
       media={media}

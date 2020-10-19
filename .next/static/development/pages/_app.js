@@ -72,93 +72,93 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["withNavigationContext"])(function (_ref) {
   var fullpage = _ref.fullpage;
   var slug = fullpage.navigation.slug;
-  return __jsx("header", {
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      menuVisibility = _useState[0],
+      setMenuVisibility = _useState[1];
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("header", {
     className: "page-header",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 5
-    }
-  }, __jsx("div", {
-    className: "page-header__wrapper",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 15,
       columnNumber: 7
     }
   }, __jsx("div", {
-    className: "page-header__title",
+    className: "logo",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 16,
       columnNumber: 9
     }
   }, __jsx(_react_logo_react_logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 11
-    }
-  }), __jsx("div", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 17,
       columnNumber: 11
     }
-  }, __jsx("h1", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 13
-    }
-  }, __jsx("span", {
+  })), __jsx("div", {
+    className: "menu",
+    onClick: function onClick() {
+      setMenuVisibility(!menuVisibility);
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 15
+      columnNumber: 9
     }
-  }, "REACT"), __jsx("span", {
+  }, __jsx("div", {
+    className: "menu-icon-wrapper",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20,
-      columnNumber: 15
+      columnNumber: 11
     }
-  }, "AWESOME SLIDER")), __jsx("h2", {
+  }, __jsx("div", {
+    className: "menu-icon-line",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }), __jsx("div", {
+    className: "menu-icon-line",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22,
       columnNumber: 13
     }
-  }, "FULL-PAGE TRANSITION STRATEGY"), __jsx("small", {
+  }), __jsx("div", {
+    className: "menu-icon-line",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23,
       columnNumber: 13
     }
-  }, "Built with ", "<3", " by", " ", __jsx("a", {
-    target: "_blank",
-    href: "https://caferati.me",
+  })))), __jsx("div", {
+    className: "fullscreen-menu-wrapper ".concat(menuVisibility === false ? "hidden" : null),
+    onClick: function onClick() {
+      setMenuVisibility(!menuVisibility);
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 15
+      lineNumber: 27,
+      columnNumber: 7
     }
-  }, "@rcaferati")))), __jsx("nav", {
+  }, __jsx("nav", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 30,
       columnNumber: 9
     }
   }, __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -167,28 +167,37 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 31,
       columnNumber: 11
     }
-  }, "index"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: slug === "page-two" ? "selected" : null,
-    href: "/page-two",
+  }, "Home"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: slug === "page-projects" ? "selected" : null,
+    href: "/page-projects",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 34,
       columnNumber: 11
     }
-  }, "page-two"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: slug === "page-three" ? "selected" : null,
-    href: "/page-three",
+  }, "Projects"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: slug === "page-cursus" ? "selected" : null,
+    href: "/page-cursus",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 40,
       columnNumber: 11
     }
-  }, "page-three"))));
+  }, "Cursus"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: slug === "page-contact" ? "selected" : null,
+    href: "/page-contact",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 11
+    }
+  }, "Contact"))));
 });
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   withNavigationContext,
   Link
@@ -8,45 +8,50 @@ import "./nav.scss";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
+  const [menuVisibility, setMenuVisibility] = useState(false);
 
   return (
-    <header className="page-header">
-      <div className="page-header__wrapper">
-        <div className="page-header__title">
+    <>
+      <header className="page-header">
+        <div className="logo">
           <ReactLogo />
-          <div>
-            <h1>
-              <span>REACT</span>
-              <span>AWESOME SLIDER</span>
-            </h1>
-            <h2>FULL-PAGE TRANSITION STRATEGY</h2>
-            <small>
-              Built with {`<3`} by{" "}
-              <a target="_blank" href="https://caferati.me">
-                @rcaferati
-              </a>
-            </small>
+        </div>
+        <div className="menu" onClick={() => { setMenuVisibility(!menuVisibility) }}>
+          <div className="menu-icon-wrapper">
+            <div className="menu-icon-line"></div>
+            <div className="menu-icon-line"></div>
+            <div className="menu-icon-line"></div>
           </div>
         </div>
+      </header>
+      <div
+        className={`fullscreen-menu-wrapper ${menuVisibility === false ? "hidden" : null}`}
+        onClick={() => { setMenuVisibility(!menuVisibility) }}>
         <nav>
           <Link className={slug === "" ? "selected" : null} href="/">
-            index
+            Home
           </Link>
           <Link
-            className={slug === "page-two" ? "selected" : null}
-            href="/page-two"
+            className={slug === "page-projects" ? "selected" : null}
+            href="/page-projects"
           >
-            page-two
+            Projects
           </Link>
           <Link
-            className={slug === "page-three" ? "selected" : null}
-            href="/page-three"
+            className={slug === "page-cursus" ? "selected" : null}
+            href="/page-cursus"
           >
-            page-three
+            Cursus
+          </Link>
+          <Link
+            className={slug === "page-contact" ? "selected" : null}
+            href="/page-contact"
+          >
+            Contact
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 });
 
