@@ -9,29 +9,29 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page>
             <Particles
-                className="canvas-wrapper-projects"
+                className="canvas-wrapper-cursus"
                 width="100%"
                 height="100%"
                 params={{
                     "particles": {
                         "number": {
-                            "value": 6,
+                            "value": 150,
                             "density": {
                                 "enable": true,
-                                "value_area": 800
+                                "value_area": 900.6025061692789
                             }
                         },
                         "color": {
                             "value": "#1b1e34"
                         },
                         "shape": {
-                            "type": "polygon",
+                            "type": "circle",
                             "stroke": {
-                                "width": 0,
-                                "color": "#000"
+                                "width": 1,
+                                "color": "#fff"
                             },
                             "polygon": {
-                                "nb_sides": 6
+                                "nb_sides": 3
                             },
                             "image": {
                                 "src": "img/github.svg",
@@ -40,44 +40,44 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                             }
                         },
                         "opacity": {
-                            "value": 0.3,
+                            "value": 0.6810242604877742,
                             "random": true,
                             "anim": {
-                                "enable": false,
+                                "enable": true,
                                 "speed": 1,
-                                "opacity_min": 0.1,
+                                "opacity_min": 0,
                                 "sync": false
                             }
                         },
                         "size": {
-                            "value": 120,
-                            "random": false,
+                            "value": 3,
+                            "random": true,
                             "anim": {
-                                "enable": true,
-                                "speed": 10,
-                                "size_min": 40,
+                                "enable": false,
+                                "speed": 4,
+                                "size_min": 0.3,
                                 "sync": false
                             }
                         },
                         "line_linked": {
-                            "enable": false,
-                            "distance": 200,
+                            "enable": true,
+                            "distance": 157.83700172831522,
                             "color": "#ffffff",
-                            "opacity": 1,
-                            "width": 2
+                            "opacity": 0.15783700172831522,
+                            "width": 0.6313480069132609
                         },
                         "move": {
                             "enable": true,
-                            "speed": 4.313480069132608,
+                            "speed": 1,
                             "direction": "top-right",
-                            "random": false,
-                            "straight": true,
+                            "random": true,
+                            "straight": false,
                             "out_mode": "out",
-                            "bounce": true,
+                            "bounce": false,
                             "attract": {
                                 "enable": false,
-                                "rotateX": 600,
-                                "rotateY": 1200
+                                "rotateX": 1104.8590120982064,
+                                "rotateY": 710.2665077774184
                             }
                         }
                     },
@@ -86,11 +86,11 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                         "events": {
                             "onhover": {
                                 "enable": false,
-                                "mode": "repulse"
+                                "mode": "bubble"
                             },
                             "onclick": {
-                                "enable": false,
-                                "mode": "push"
+                                "enable": true,
+                                "mode": "repulse"
                             },
                             "resize": true
                         },
@@ -102,14 +102,14 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                                 }
                             },
                             "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
+                                "distance": 167.83216783216784,
+                                "size": 15.984015984015986,
+                                "duration": 1.5184815184815184,
+                                "opacity": 0,
                                 "speed": 3
                             },
                             "repulse": {
-                                "distance": 200,
+                                "distance": 400,
                                 "duration": 0.4
                             },
                             "push": {

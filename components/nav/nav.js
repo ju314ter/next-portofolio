@@ -17,7 +17,13 @@ const Nav = withNavigationContext(({ fullpage }) => {
           <ReactLogo />
           <p>Workshop</p>
         </div>
-        <div className="menu" onClick={() => { setMenuVisibility(!menuVisibility) }}>
+        <div className="menu" onClick={() => {
+          setMenuVisibility(!menuVisibility);
+          document.querySelectorAll("a").forEach((el, i) => {
+            el.classList.add("slidein");
+            el.style.animationDelay = (i + 1) * 200 + 'ms';
+          });
+        }}>
           <div className="menu-icon-wrapper">
             <div className="menu-icon-line"></div>
             <div className="menu-icon-line"></div>
@@ -27,7 +33,10 @@ const Nav = withNavigationContext(({ fullpage }) => {
       </header>
       <div
         className={`fullscreen-menu-wrapper ${menuVisibility === false ? "hidden" : null}`}
-        onClick={() => { setMenuVisibility(!menuVisibility) }}>
+        onClick={() => {
+          setMenuVisibility(!menuVisibility);
+          document.querySelectorAll("a").forEach((el) => el.classList.remove("slidein"));
+        }}>
         <nav>
           <Link className={slug === "" ? "selected" : null} href="/">
             Home

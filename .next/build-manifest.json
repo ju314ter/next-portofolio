@@ -30,6 +30,12 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
+    "/page-contact": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
     "/page-projects": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",

@@ -9,29 +9,29 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page>
             <Particles
-                className="canvas-wrapper-cursus"
+                className="canvas-wrapper-projects"
                 width="100%"
                 height="100%"
                 params={{
                     "particles": {
                         "number": {
-                            "value": 150,
+                            "value": 6,
                             "density": {
                                 "enable": true,
-                                "value_area": 900.6025061692789
+                                "value_area": 800
                             }
                         },
                         "color": {
                             "value": "#1b1e34"
                         },
                         "shape": {
-                            "type": "circle",
+                            "type": "polygon",
                             "stroke": {
-                                "width": 1,
-                                "color": "#fff"
+                                "width": 0,
+                                "color": "#000"
                             },
                             "polygon": {
-                                "nb_sides": 3
+                                "nb_sides": 6
                             },
                             "image": {
                                 "src": "img/github.svg",
@@ -40,44 +40,44 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                             }
                         },
                         "opacity": {
-                            "value": 0.6810242604877742,
+                            "value": 0.3,
                             "random": true,
                             "anim": {
-                                "enable": true,
+                                "enable": false,
                                 "speed": 1,
-                                "opacity_min": 0,
+                                "opacity_min": 0.1,
                                 "sync": false
                             }
                         },
                         "size": {
-                            "value": 3,
-                            "random": true,
+                            "value": 120,
+                            "random": false,
                             "anim": {
-                                "enable": false,
-                                "speed": 4,
-                                "size_min": 0.3,
+                                "enable": true,
+                                "speed": 10,
+                                "size_min": 40,
                                 "sync": false
                             }
                         },
                         "line_linked": {
-                            "enable": true,
-                            "distance": 157.83700172831522,
+                            "enable": false,
+                            "distance": 200,
                             "color": "#ffffff",
-                            "opacity": 0.15783700172831522,
-                            "width": 0.6313480069132609
+                            "opacity": 1,
+                            "width": 2
                         },
                         "move": {
                             "enable": true,
-                            "speed": 1,
+                            "speed": 4.313480069132608,
                             "direction": "top-right",
-                            "random": true,
-                            "straight": false,
+                            "random": false,
+                            "straight": true,
                             "out_mode": "out",
-                            "bounce": false,
+                            "bounce": true,
                             "attract": {
                                 "enable": false,
-                                "rotateX": 1104.8590120982064,
-                                "rotateY": 710.2665077774184
+                                "rotateX": 600,
+                                "rotateY": 1200
                             }
                         }
                     },
@@ -86,11 +86,11 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                         "events": {
                             "onhover": {
                                 "enable": false,
-                                "mode": "bubble"
+                                "mode": "repulse"
                             },
                             "onclick": {
-                                "enable": true,
-                                "mode": "repulse"
+                                "enable": false,
+                                "mode": "push"
                             },
                             "resize": true
                         },
@@ -102,14 +102,14 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                                 }
                             },
                             "bubble": {
-                                "distance": 167.83216783216784,
-                                "size": 15.984015984015986,
-                                "duration": 1.5184815184815184,
-                                "opacity": 0,
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
                                 "speed": 3
                             },
                             "repulse": {
-                                "distance": 400,
+                                "distance": 200,
                                 "duration": 0.4
                             },
                             "push": {
