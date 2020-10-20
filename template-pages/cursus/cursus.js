@@ -122,7 +122,9 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                     },
                     "retina_detect": true
                 }} />
-            <p>This is cursus page</p>
+            <div className="cursus-wrapper">
+                <p>This is cursus page</p>
+            </div>
         </Page>
     )
 });

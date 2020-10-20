@@ -203,7 +203,14 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
       lineNumber: 17,
       columnNumber: 11
     }
-  })), __jsx("div", {
+  }), __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }, "Workshop")), __jsx("div", {
     className: "menu",
     onClick: () => {
       setMenuVisibility(!menuVisibility);
@@ -211,7 +218,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -219,18 +226,10 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 11
     }
   }, __jsx("div", {
-    className: "menu-icon-line",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
     className: "menu-icon-line",
     __self: undefined,
     __source: {
@@ -246,6 +245,14 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
       lineNumber: 23,
       columnNumber: 13
     }
+  }), __jsx("div", {
+    className: "menu-icon-line",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
   })))), __jsx("div", {
     className: `fullscreen-menu-wrapper ${menuVisibility === false ? "hidden" : null}`,
     onClick: () => {
@@ -254,14 +261,14 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -270,7 +277,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 11
     }
   }, "Home"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -279,7 +286,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 35,
       columnNumber: 11
     }
   }, "Projects"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -288,7 +295,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 41,
       columnNumber: 11
     }
   }, "Cursus"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -297,7 +304,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 11
     }
   }, "Contact"))));
@@ -330,8 +337,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _react_logo_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./react-logo.scss */ "./components/react-logo/react-logo.scss");
 /* harmony import */ var _react_logo_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_react_logo_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_logoJF2_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/logoJF2.svg */ "./public/logoJF2.svg");
 var _jsxFileName = "D:\\Repositories\\JFWorkshop-next\\jfworkshop\\components\\react-logo\\react-logo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -341,28 +350,14 @@ const ReactLogo = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 5
     }
-  }, __jsx("span", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 7
-    }
-  }), __jsx("span", {
+  }, __jsx(_public_logoJF2_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 7
-    }
-  }), __jsx("span", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
       columnNumber: 7
     }
   }));
@@ -527,6 +522,75 @@ function App({
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./public/logoJF2.svg":
+/*!****************************!*\
+  !*** ./public/logoJF2.svg ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("linearGradient", {
+  id: "logoJF2_svg__D\\xE9grad\\xE9_sans_nom_148",
+  x1: 103,
+  y1: 246,
+  x2: 391,
+  y2: 246,
+  gradientUnits: "userSpaceOnUse"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("stop", {
+  offset: 0.29,
+  stopColor: "#c93"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("stop", {
+  offset: 0.62,
+  stopColor: "#c60"
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("style", null, ".logoJF2_svg__cls-4,.logoJF2_svg__cls-5{fill:#c93;stroke:#c93;stroke-miterlimit:10;stroke-width:8px}.logoJF2_svg__cls-5{fill:none;stroke:#c60}"));
+
+var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  d: "M333 439.38H117V265l-72 59v180a862.71 862.71 0 01360 0V180h-72z",
+  transform: "translate(-41 -41.5)",
+  fill: "#c60"
+});
+
+var _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  d: "M243 137.23l216-.51V310l72-58-.13-180.43A861.69 861.69 0 01360 90.94a861.91 861.91 0 01-189.13-18.51L171 396h71z",
+  transform: "translate(-41 -41.5)",
+  fill: "#c93"
+});
+
+var _ref4 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  fill: "url(#logoJF2_svg__D\\xE9grad\\xE9_sans_nom_148)",
+  d: "M103 223.5h288v45H103z"
+});
+
+var _ref5 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  className: "logoJF2_svg__cls-4",
+  d: "M4 8l486-4M4 4v170.5"
+});
+
+var _ref6 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  className: "logoJF2_svg__cls-5",
+  d: "M4 493.5l486-4M490 318.5v175"
+});
+
+function SvgLogoJf2(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("svg", _extends({
+    id: "logoJF2_svg__Calque_1",
+    "data-name": "Calque 1",
+    viewBox: "0 0 494 497.5"
+  }, props), _ref, _ref2, _ref3, _ref4, _ref5, _ref6);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgLogoJf2);
 
 /***/ }),
 

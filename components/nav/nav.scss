@@ -47,6 +47,15 @@
 
   .logo {
     margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 3em;
+      margin-left: 15px;
+      font-family: Acme;
+    }
   }
 
   .menu-icon-wrapper {

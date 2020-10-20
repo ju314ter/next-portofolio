@@ -66,7 +66,12 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                         }
                     }
                 }} />
-            <p>This is home</p>
+            <div className="home-wrapper">
+                <div className="title">
+                    <h1>Julien FEGER</h1>
+                    <h2>Fullstack JS junior developper</h2>
+                </div>
+            </div>
         </Page>
     );
 });

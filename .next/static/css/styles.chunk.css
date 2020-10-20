@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Acme&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800;900&display=swap);
 /* Box sizing rules */
 *,
 *::before,
@@ -2585,6 +2587,19 @@ select {
 body.visible .canvas-wrapper-home {
   opacity: 1; }
 
+.home-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home-wrapper h1 {
+    font-family: Acme;
+    font-size: 50px; }
+  .home-wrapper h2 {
+    font-family: Encode Sans;
+    font-size: 35px; }
+
 .projects-page .page {
   background: whitesmoke; }
 
@@ -2603,12 +2618,16 @@ body.visible .canvas-wrapper-projects {
 .projects-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+
+.cursus-page .page {
+  background: #2f2f2f; }
 
 .canvas-wrapper-cursus {
   position: absolute;
   opacity: 0;
-  background: #2f2f2f;
   top: 0;
   left: 0;
   width: 100%;
@@ -2618,75 +2637,31 @@ body.visible .canvas-wrapper-projects {
 body.visible .canvas-wrapper-cursus {
   opacity: 1; }
 
-.contact-page {
-  background-color: #383636;
+.cursus-wrapper {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50; }
 
-.logo-container > span, .logo-container > span:before {
-  border-radius: 50%;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0; }
+.contact-page {
+  background-color: #383636; }
+
+.contact-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .logo-container {
   --size: 72px;
-  --ellipse: calc(var(--size) / 2);
-  --circle: calc(var(--ellipse) / 10);
-  --border: calc(var(--size) / 16);
-  --speed: 2;
-  --background: #61dafb;
-  --angle: 66deg;
-  display: block;
-  height: var(--size);
-  position: relative;
-  transform: rotate(180deg);
   width: var(--size);
-  z-index: 1000; }
-  .logo-container:before {
-    content: ' ';
-    background-color: var(--background);
-    border-radius: calc(var(--size) / 12);
-    display: block;
-    height: calc(var(--size) / 6);
-    left: calc(50% - (var(--size) / 12));
-    position: absolute;
-    top: calc(50% - (var(--size) / 12));
-    width: calc(var(--size) / 6);
-    z-index: 1; }
-  .logo-container > span {
-    width: calc(var(--ellipse) * 2);
-    height: calc(var(--ellipse) * 2);
-    border: var(--border) var(--background) solid;
-    transform-style: preserve-3d; }
-    .logo-container > span:before {
-      content: ' ';
-      width: calc(var(--circle) * 2);
-      height: calc(var(--circle) * 2);
-      animation: path linear infinite;
-      background: var(--background);
-      display: block; }
-    .logo-container > span:nth-child(1) {
-      transform: rotateZ(60deg) rotateY(var(--angle)); }
-      .logo-container > span:nth-child(1):before {
-        animation-duration: 1s; }
-    .logo-container > span:nth-child(2) {
-      transform: rotateZ(120deg) rotateY(var(--angle)); }
-      .logo-container > span:nth-child(2):before {
-        animation-duration: 2s; }
-    .logo-container > span:nth-child(3) {
-      transform: rotateZ(180deg) rotateY(var(--angle)); }
-      .logo-container > span:nth-child(3):before {
-        animation-duration: 3s; }
-
-@keyframes path {
-  from {
-    transform: rotateZ(0) translateX(var(--ellipse)) rotateZ(0) rotateY(var(--angle)); }
-  to {
-    transform: rotateZ(360deg) translateX(var(--ellipse)) rotateZ(-360deg) rotateY(var(--angle)); } }
+  z-index: 1000;
+  position: relative; }
+  .logo-container svg {
+    width: 100%; }
 
 .fullscreen-menu-wrapper {
   position: absolute;
@@ -2727,7 +2702,14 @@ body.visible .canvas-wrapper-cursus {
   height: 150px;
   width: 100vw; }
   .page-header .logo {
-    margin-left: 50px; }
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .page-header .logo p {
+      font-size: 3em;
+      margin-left: 15px;
+      font-family: Acme; }
   .page-header .menu-icon-wrapper {
     margin-right: 50px;
     z-index: 1500;

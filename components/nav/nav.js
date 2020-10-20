@@ -15,6 +15,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       <header className="page-header">
         <div className="logo">
           <ReactLogo />
+          <p>Workshop</p>
         </div>
         <div className="menu" onClick={() => { setMenuVisibility(!menuVisibility) }}>
           <div className="menu-icon-wrapper">

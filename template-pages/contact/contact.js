@@ -8,7 +8,9 @@ import './contact.scss'
 export const ContactPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page className="contact-page">
-            <p>Contact page</p>
+            <div className="contact-wrapper">
+                <p>Contact page</p>
+            </div>
         </Page>
     )
 });
