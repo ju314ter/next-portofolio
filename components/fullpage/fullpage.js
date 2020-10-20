@@ -39,7 +39,7 @@ const options = [
 
 export default withNavigationContext(({ fullpage }) => {
   const isFirstLoad = useRef(true);
-  const animation = fullpage.navigation.animation || `cubeAnimation`;
+  const animation = fullpage.navigation.animation || `foldOutAnimation`;
 
   return (
     <Slider

@@ -2682,9 +2682,16 @@ body.visible .canvas-wrapper-cursus {
     color: white;
     font-size: 42px;
     margin: 10px;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: Encode Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f2f2f;
+    padding: 10px;
+    border-radius: 3px; }
   .fullscreen-menu-wrapper a.selected {
-    color: blue; }
+    color: #a2a2a2; }
 
 .fullscreen-menu-wrapper.hidden {
   opacity: 0;
@@ -2700,7 +2707,10 @@ body.visible .canvas-wrapper-cursus {
   justify-content: space-between;
   align-items: center;
   height: 150px;
-  width: 100vw; }
+  width: 100vw;
+  opacity: 1;
+  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both; }
   .page-header .logo {
     margin-left: 50px;
     display: flex;
@@ -2720,6 +2730,16 @@ body.visible .canvas-wrapper-cursus {
       background-color: black;
       margin: 6px 0;
       border-radius: 3px; }
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
 
 .startup {
   display: flex;
