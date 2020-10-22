@@ -72,7 +72,13 @@
     p {
       font-size: 3em;
       margin-left: 15px;
-      font-family: Acme;
+      font-family: Open Sans;
+      transition: all 0.3s linear;
+      pointer-events: none;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 

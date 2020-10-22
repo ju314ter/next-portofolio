@@ -5,6 +5,15 @@ import Particles from 'react-particles-js';
 
 import './home.scss'
 
+import Angular from '../../public/angular.svg';
+import Git from '../../public/git.svg';
+import Gitlab from '../../public/gitlab.svg';
+import Jira from '../../public/jira.svg';
+import Mongo from '../../public/mongodb.svg';
+import Node from '../../public/nodejs.svg';
+import ReactLogo from '../../public/react.svg';
+import Typescript from '../../public/typescript.svg';
+
 export const HomePage = withNavigationContext(({ fullpage }) => {
     return (
         <Page>
@@ -70,6 +79,32 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                 <div className="title">
                     <h1>Julien FEGER</h1>
                     <h2>Fullstack JS junior developper</h2>
+                </div>
+                <div className="tech-slider-wrapper">
+                    <div className="angular-logo-wrapper">
+                        <Angular />
+                    </div>
+                    <div className="git-logo-wrapper">
+                        <Git />
+                    </div>
+                    <div className="gitlab-logo-wrapper">
+                        <Gitlab />
+                    </div>
+                    <div className="jira-logo-wrapper">
+                        <Jira />
+                    </div>
+                    <div className="mongo-logo-wrapper">
+                        <Mongo />
+                    </div>
+                    <div className="node-logo-wrapper">
+                        <Node />
+                    </div>
+                    <div className="react-logo-wrapper">
+                        <ReactLogo />
+                    </div>
+                    <div className="typescript-logo-wrapper">
+                        {/* <Typescript /> */}
+                    </div>
                 </div>
             </div>
         </Page>

@@ -101,6 +101,9 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
       columnNumber: 11
     }
   }), __jsx("p", {
+    style: slug === "page-projects" ? {
+      color: 'white'
+    } : null,
     __self: _this,
     __source: {
       fileName: _jsxFileName,

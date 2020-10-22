@@ -15,7 +15,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
       <header className="page-header">
         <div className="logo">
           <ReactLogo />
-          <p>Workshop</p>
+          <p style={slug === "page-projects" ? { color: 'white' } : null}>Workshop</p>
         </div>
         <div className="menu" onClick={() => {
           setMenuVisibility(!menuVisibility);

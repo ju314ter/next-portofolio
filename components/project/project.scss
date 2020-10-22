@@ -1,0 +1,40 @@
+.project-container {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 40%;
+    height: 55vh;
+    margin: 30px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: 0;
+
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.5);
+
+    &:hover {
+        transform: scale(1.03);
+        top: -10px;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(255,255,255,0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(255,255,255,0.75);
+        box-shadow: 0px 0px 25px 0px rgba(255,255,255,0.75);
+
+    }
+
+    &:last-child {
+        flex: 0 0 40%;
+    }
+}
+
+.img-wrapper {
+    background: blue;
+    justify-self: flex-start;
+    width: 100%;
+    height: 285px;
+}
+
+.tags-wrapper {
+    margin-top: auto;
+}
