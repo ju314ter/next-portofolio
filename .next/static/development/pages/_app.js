@@ -58,13 +58,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-awesome-slider/dist/navigation */ "./node_modules/react-awesome-slider/dist/navigation.js");
 /* harmony import */ var react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _react_logo_react_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../react-logo/react-logo */ "./components/react-logo/react-logo.js");
-/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav.scss */ "./components/nav/nav.scss");
-/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_nav_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @n8tb1t/use-scroll-position */ "./node_modules/@n8tb1t/use-scroll-position/lib/index.js");
+/* harmony import */ var _n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _react_logo_react_logo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../react-logo/react-logo */ "./components/react-logo/react-logo.js");
+/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav.scss */ "./components/nav/nav.scss");
+/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nav_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _this = undefined,
     _jsxFileName = "D:\\Repositories\\JFWorkshop-next\\jfworkshop\\components\\nav\\nav.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -77,12 +80,18 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
       menuVisibility = _useState[0],
       setMenuVisibility = _useState[1];
 
+  Object(_n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__["useScrollPosition"])(function (_ref2) {
+    var prevPos = _ref2.prevPos,
+        currPos = _ref2.currPos;
+    console.log(currPos.x);
+    console.log(currPos.y);
+  });
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("header", {
     className: "page-header",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 22,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -90,14 +99,14 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 23,
       columnNumber: 9
     }
-  }, __jsx(_react_logo_react_logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_react_logo_react_logo__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 24,
       columnNumber: 11
     }
   }), __jsx("p", {
@@ -107,7 +116,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 25,
       columnNumber: 11
     }
   }, "Workshop")), __jsx("div", {
@@ -122,7 +131,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -130,7 +139,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 34,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -138,7 +147,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 35,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -146,7 +155,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 36,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -154,7 +163,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 37,
       columnNumber: 13
     }
   })))), __jsx("div", {
@@ -168,14 +177,14 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 41,
       columnNumber: 7
     }
   }, __jsx("nav", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 47,
       columnNumber: 9
     }
   }, __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -184,7 +193,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 48,
       columnNumber: 11
     }
   }, "Home"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -193,7 +202,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 51,
       columnNumber: 11
     }
   }, "Projects"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -202,7 +211,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 57,
       columnNumber: 11
     }
   }, "Cursus"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -211,7 +220,7 @@ var Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 63,
       columnNumber: 11
     }
   }, "Contact"))));
@@ -1027,6 +1036,129 @@ module.exports = _typeof;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/@n8tb1t/use-scroll-position/lib/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@n8tb1t/use-scroll-position/lib/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var useScrollPosition_1 = __webpack_require__(/*! ./useScrollPosition */ "./node_modules/@n8tb1t/use-scroll-position/lib/useScrollPosition.js");
+Object.defineProperty(exports, "useScrollPosition", { enumerable: true, get: function () { return useScrollPosition_1.useScrollPosition; } });
+
+
+/***/ }),
+
+/***/ "./node_modules/@n8tb1t/use-scroll-position/lib/useIsomorphicLayoutEffect.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@n8tb1t/use-scroll-position/lib/useIsomorphicLayoutEffect.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.useIsomorphicLayoutEffect = void 0;
+const react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+exports.useIsomorphicLayoutEffect = typeof window !== 'undefined' ? react_1.useLayoutEffect : react_1.useEffect;
+
+
+/***/ }),
+
+/***/ "./node_modules/@n8tb1t/use-scroll-position/lib/useScrollPosition.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@n8tb1t/use-scroll-position/lib/useScrollPosition.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.useScrollPosition = void 0;
+const react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+const useIsomorphicLayoutEffect_1 = __webpack_require__(/*! ./useIsomorphicLayoutEffect */ "./node_modules/@n8tb1t/use-scroll-position/lib/useIsomorphicLayoutEffect.js");
+const isBrowser = typeof window !== `undefined`;
+const zeroPosition = { x: 0, y: 0 };
+const getClientRect = (element) => element === null || element === void 0 ? void 0 : element.getBoundingClientRect();
+const getScrollPosition = ({ element, useWindow, boundingElement, }) => {
+    if (!isBrowser) {
+        return zeroPosition;
+    }
+    if (useWindow) {
+        return { x: window.scrollX, y: window.scrollY };
+    }
+    const targetPosition = getClientRect((element === null || element === void 0 ? void 0 : element.current) || document.body);
+    const containerPosition = getClientRect(boundingElement === null || boundingElement === void 0 ? void 0 : boundingElement.current);
+    if (!targetPosition) {
+        return zeroPosition;
+    }
+    return containerPosition
+        ? {
+            x: (containerPosition.x || 0) - (targetPosition.x || 0),
+            y: (containerPosition.y || 0) - (targetPosition.y || 0),
+        }
+        : { x: targetPosition.left, y: targetPosition.top };
+};
+exports.useScrollPosition = (effect, deps, element, useWindow, wait, boundingElement) => {
+    const position = react_1.useRef(getScrollPosition({ useWindow, boundingElement }));
+    let throttleTimeout = null;
+    const callBack = () => {
+        const currPos = getScrollPosition({ element, useWindow, boundingElement });
+        effect({ prevPos: position.current, currPos });
+        position.current = currPos;
+        throttleTimeout = null;
+    };
+    useIsomorphicLayoutEffect_1.useIsomorphicLayoutEffect(() => {
+        var _a;
+        if (!isBrowser) {
+            return undefined;
+        }
+        const handleScroll = () => {
+            if (wait) {
+                if (throttleTimeout === null) {
+                    throttleTimeout = setTimeout(callBack, wait);
+                }
+            }
+            else {
+                callBack();
+            }
+        };
+        if (boundingElement) {
+            (_a = boundingElement.current) === null || _a === void 0 ? void 0 : _a.addEventListener('scroll', handleScroll, { passive: true });
+        }
+        else {
+            window.addEventListener('scroll', handleScroll, { passive: true });
+        }
+        return () => {
+            var _a;
+            if (boundingElement) {
+                (_a = boundingElement.current) === null || _a === void 0 ? void 0 : _a.removeEventListener('scroll', handleScroll);
+            }
+            else {
+                window.removeEventListener('scroll', handleScroll);
+            }
+            if (throttleTimeout) {
+                clearTimeout(throttleTimeout);
+            }
+        };
+    }, deps);
+};
+exports.useScrollPosition.defaultProps = {
+    deps: [],
+    element: false,
+    useWindow: false,
+    wait: null,
+    boundingElement: false,
+};
 
 
 /***/ }),

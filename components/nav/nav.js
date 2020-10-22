@@ -3,12 +3,19 @@ import {
   withNavigationContext,
   Link
 } from "react-awesome-slider/dist/navigation";
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import ReactLogo from "../react-logo/react-logo";
 import "./nav.scss";
+
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
   const [menuVisibility, setMenuVisibility] = useState(false);
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    console.log(currPos.x)
+    console.log(currPos.y)
+  })
 
   return (
     <>

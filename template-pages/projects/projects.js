@@ -46,7 +46,7 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
 
     return (
         <Page>
-            {/* <Particles
+            <Particles
                 className="canvas-wrapper-cursus"
                 width="100%"
                 height="100%"
@@ -159,7 +159,7 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                         }
                     },
                     "retina_detect": true
-                }} /> */}
+                }} />
             <div className="projects-wrapper">
                 {Object.entries(projects).map((project, i) => {
                     return <Project project={project[1]} key={i} />
