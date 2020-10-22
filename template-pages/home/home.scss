@@ -23,6 +23,8 @@ body.visible .canvas-wrapper-home {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    perspective: 1200px;
+    text-align: center;
 
     h1 {
         font-family: Open Sans;
@@ -40,23 +42,60 @@ body.visible .canvas-wrapper-home {
     justify-content: center;
     align-items: center;
     height: 250px;
-    -webkit-animation: spin linear 6s infinite;
-	animation: spin linear 6s infinite;
+    -webkit-animation: spin linear 10s infinite;
+	animation: spin linear 10s infinite;
     transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50% -300px;
 
+    &:hover {
+        animation-play-state: paused;
+    }
+    
     div {
         position: absolute;
         width: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(180px);
+        transform-origin: 50% 50% -300px;
 
-    @for $i from 0 through 7 {
+        @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
-            transform: rotateY(calc(45deg * #{$i}));
+            transform: rotateY(calc(45deg * (#{$i} -1)));
         }
-    }
+            @if $i == 1 {  
+                &:nth-child(#{$i}) {
+                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                }
+            }
+
+            @if $i == 3 {  
+                &:nth-child(#{$i}) {
+                transform: rotateY(calc(45deg * (#{$i} -1))) scale(1.5);
+                }
+            }
+
+            @if $i == 4 {  
+                &:nth-child(#{$i}) {
+                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                }
+            }
+
+            
+            @if $i == 5 {  
+                &:nth-child(#{$i}) {
+                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                }
+            }
+
+            @if $i == 8 {  
+                &:nth-child(#{$i}) {
+                width: unset;
+                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.25);
+                }
+            }
+        }
 
         svg {
             display: block;

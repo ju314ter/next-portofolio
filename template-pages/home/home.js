@@ -82,7 +82,10 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                 </div>
                 <div className="tech-slider-wrapper">
                     <div className="angular-logo-wrapper">
-                        <Angular />
+                        <Angular height={250} />
+                    </div>
+                    <div className="jira-logo-wrapper">
+                        <Jira height={250} />
                     </div>
                     <div className="git-logo-wrapper">
                         <Git />
@@ -90,20 +93,17 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                     <div className="gitlab-logo-wrapper">
                         <Gitlab />
                     </div>
-                    <div className="jira-logo-wrapper">
-                        <Jira />
-                    </div>
-                    <div className="mongo-logo-wrapper">
-                        <Mongo />
-                    </div>
                     <div className="node-logo-wrapper">
                         <Node />
+                    </div>
+                    <div className="mongo-logo-wrapper">
+                        <Mongo height={250} />
                     </div>
                     <div className="react-logo-wrapper">
                         <ReactLogo />
                     </div>
                     <div className="typescript-logo-wrapper">
-                        {/* <Typescript /> */}
+                        <Typescript />
                     </div>
                 </div>
             </div>

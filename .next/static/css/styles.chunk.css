@@ -2593,7 +2593,9 @@ body.visible .canvas-wrapper-home {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  perspective: 1200px;
+  text-align: center; }
   .home-wrapper h1 {
     font-family: Open Sans;
     font-size: 50px; }
@@ -2607,32 +2609,47 @@ body.visible .canvas-wrapper-home {
   justify-content: center;
   align-items: center;
   height: 250px;
-  -webkit-animation: spin linear 6s infinite;
-  animation: spin linear 6s infinite;
-  transform-style: preserve-3d; }
+  -webkit-animation: spin linear 10s infinite;
+  animation: spin linear 10s infinite;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50% -300px; }
+  .tech-slider-wrapper:hover {
+    animation-play-state: paused; }
   .tech-slider-wrapper div {
     position: absolute;
     width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(180px); }
-    .tech-slider-wrapper div:nth-child(0) {
-      transform: rotateY(calc(45deg * 0)); }
+    transform-origin: 50% 50% -300px; }
     .tech-slider-wrapper div:nth-child(1) {
-      transform: rotateY(calc(45deg * 1)); }
+      transform: rotateY(calc(45deg * (1 -1))); }
+    .tech-slider-wrapper div:nth-child(1) {
+      transform: rotateY(calc(45deg * (1 -1))) scale(0.8); }
     .tech-slider-wrapper div:nth-child(2) {
-      transform: rotateY(calc(45deg * 2)); }
+      transform: rotateY(calc(45deg * (2 -1))); }
     .tech-slider-wrapper div:nth-child(3) {
-      transform: rotateY(calc(45deg * 3)); }
+      transform: rotateY(calc(45deg * (3 -1))); }
+    .tech-slider-wrapper div:nth-child(3) {
+      transform: rotateY(calc(45deg * (3 -1))) scale(1.5); }
     .tech-slider-wrapper div:nth-child(4) {
-      transform: rotateY(calc(45deg * 4)); }
+      transform: rotateY(calc(45deg * (4 -1))); }
+    .tech-slider-wrapper div:nth-child(4) {
+      transform: rotateY(calc(45deg * (4 -1))) scale(0.8); }
     .tech-slider-wrapper div:nth-child(5) {
-      transform: rotateY(calc(45deg * 5)); }
+      transform: rotateY(calc(45deg * (5 -1))); }
+    .tech-slider-wrapper div:nth-child(5) {
+      transform: rotateY(calc(45deg * (5 -1))) scale(0.8); }
     .tech-slider-wrapper div:nth-child(6) {
-      transform: rotateY(calc(45deg * 6)); }
+      transform: rotateY(calc(45deg * (6 -1))); }
     .tech-slider-wrapper div:nth-child(7) {
-      transform: rotateY(calc(45deg * 7)); }
+      transform: rotateY(calc(45deg * (7 -1))); }
+    .tech-slider-wrapper div:nth-child(8) {
+      transform: rotateY(calc(45deg * (8 -1))); }
+    .tech-slider-wrapper div:nth-child(8) {
+      width: unset;
+      transform: rotateY(calc(45deg * (8 -1))) scale(0.25); }
     .tech-slider-wrapper div svg {
       display: block; }
 
