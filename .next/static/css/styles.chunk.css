@@ -2611,11 +2611,10 @@ body.visible .canvas-wrapper-home {
   height: 250px;
   -webkit-animation: spin linear 10s infinite;
   animation: spin linear 10s infinite;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50% -300px; }
-  .tech-slider-wrapper:hover {
-    animation-play-state: paused; }
   .tech-slider-wrapper div {
     position: absolute;
     width: 250px;
@@ -2624,32 +2623,45 @@ body.visible .canvas-wrapper-home {
     align-items: center;
     transform-origin: 50% 50% -300px; }
     .tech-slider-wrapper div:nth-child(1) {
-      transform: rotateY(calc(45deg * (1 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 1));
+      transform: rotateY(calc(45deg * 1)); }
     .tech-slider-wrapper div:nth-child(1) {
-      transform: rotateY(calc(45deg * (1 -1))) scale(0.8); }
+      -webkit-transform: rotateY(calc(45deg * 1)) scale(0.8);
+      transform: rotateY(calc(45deg * 1)) scale(0.8); }
     .tech-slider-wrapper div:nth-child(2) {
-      transform: rotateY(calc(45deg * (2 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 2));
+      transform: rotateY(calc(45deg * 2)); }
     .tech-slider-wrapper div:nth-child(3) {
-      transform: rotateY(calc(45deg * (3 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 3));
+      transform: rotateY(calc(45deg * 3)); }
     .tech-slider-wrapper div:nth-child(3) {
-      transform: rotateY(calc(45deg * (3 -1))) scale(1.5); }
+      -webkit-transform: rotateY(calc(45deg * 3)) scale(1.5);
+      transform: rotateY(calc(45deg * 3)) scale(1.5); }
     .tech-slider-wrapper div:nth-child(4) {
-      transform: rotateY(calc(45deg * (4 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 4));
+      transform: rotateY(calc(45deg * 4)); }
     .tech-slider-wrapper div:nth-child(4) {
-      transform: rotateY(calc(45deg * (4 -1))) scale(0.8); }
+      -webkit-transform: rotateY(calc(45deg * 4)) scale(0.8);
+      transform: rotateY(calc(45deg * 4)) scale(0.8); }
     .tech-slider-wrapper div:nth-child(5) {
-      transform: rotateY(calc(45deg * (5 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 5));
+      transform: rotateY(calc(45deg * 5)); }
     .tech-slider-wrapper div:nth-child(5) {
-      transform: rotateY(calc(45deg * (5 -1))) scale(0.8); }
+      -webkit-transform: rotateY(calc(45deg * 5)) scale(0.8);
+      transform: rotateY(calc(45deg * 5)) scale(0.8); }
     .tech-slider-wrapper div:nth-child(6) {
-      transform: rotateY(calc(45deg * (6 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 6));
+      transform: rotateY(calc(45deg * 6)); }
     .tech-slider-wrapper div:nth-child(7) {
-      transform: rotateY(calc(45deg * (7 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 7));
+      transform: rotateY(calc(45deg * 7)); }
     .tech-slider-wrapper div:nth-child(8) {
-      transform: rotateY(calc(45deg * (8 -1))); }
+      -webkit-transform: rotateY(calc(45deg * 8));
+      transform: rotateY(calc(45deg * 8)); }
     .tech-slider-wrapper div:nth-child(8) {
       width: unset;
-      transform: rotateY(calc(45deg * (8 -1))) scale(0.25); }
+      -webkit-transform: rotateY(calc(45deg * 8)) scale(0.25);
+      transform: rotateY(calc(45deg * 8)) scale(0.25); }
     .tech-slider-wrapper div svg {
       display: block; }
 

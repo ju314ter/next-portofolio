@@ -43,14 +43,15 @@ body.visible .canvas-wrapper-home {
     align-items: center;
     height: 250px;
     -webkit-animation: spin linear 10s infinite;
-	animation: spin linear 10s infinite;
+    animation: spin linear 10s infinite;
+    -webkit-transform-style:  preserve-3d;;
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50% -300px;
 
-    &:hover {
-        animation-play-state: paused;
-    }
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
     
     div {
         position: absolute;
@@ -62,37 +63,43 @@ body.visible .canvas-wrapper-home {
 
         @for $i from 1 through 8 {
         &:nth-child(#{$i}) {
-            transform: rotateY(calc(45deg * (#{$i} -1)));
+            -webkit-transform: rotateY(calc(45deg * #{$i}));
+            transform: rotateY(calc(45deg * #{$i}));
         }
             @if $i == 1 {  
                 &:nth-child(#{$i}) {
-                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                -webkit-transform: rotateY(calc(45deg * #{$i})) scale(0.8);
+                transform: rotateY(calc(45deg * #{$i})) scale(0.8);
                 }
             }
 
             @if $i == 3 {  
                 &:nth-child(#{$i}) {
-                transform: rotateY(calc(45deg * (#{$i} -1))) scale(1.5);
+                -webkit-transform: rotateY(calc(45deg * #{$i})) scale(1.5);
+                transform: rotateY(calc(45deg * #{$i})) scale(1.5);
                 }
             }
 
             @if $i == 4 {  
                 &:nth-child(#{$i}) {
-                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                -webkit-transform: rotateY(calc(45deg * #{$i})) scale(0.8);
+                transform: rotateY(calc(45deg * #{$i})) scale(0.8);
                 }
             }
 
             
             @if $i == 5 {  
                 &:nth-child(#{$i}) {
-                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.8);
+                -webkit-transform: rotateY(calc(45deg * #{$i})) scale(0.8);
+                transform: rotateY(calc(45deg * #{$i})) scale(0.8);
                 }
             }
 
             @if $i == 8 {  
                 &:nth-child(#{$i}) {
                 width: unset;
-                transform: rotateY(calc(45deg * (#{$i} -1))) scale(0.25);
+                -webkit-transform: rotateY(calc(45deg * #{$i})) scale(0.25);
+                transform: rotateY(calc(45deg * #{$i})) scale(0.25);
                 }
             }
         }
