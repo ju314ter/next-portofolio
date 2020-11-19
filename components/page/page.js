@@ -5,10 +5,10 @@ const Page = ({ children }) => {
 
   useEffect(() => {
     const scrollX = document.getElementsByClassName('page')
-    let scrollElement;
+    const scrollElement = scrollX[0];
     console.log(scrollX.length)
     console.log(scrollX)
-    scrollX[0].addEventListener("scroll", function () {
+    scrollElement.addEventListener("scroll", function () {
       console.log(scrollX[0].scrollTop)
     });
 
