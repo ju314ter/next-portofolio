@@ -15,6 +15,7 @@ import ReactLogo from '../../public/react.svg';
 import Typescript from '../../public/typescript.svg';
 
 export const HomePage = withNavigationContext(({ fullpage }) => {
+
     return (
         <Page>
             <Particles

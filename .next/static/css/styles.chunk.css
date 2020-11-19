@@ -2589,7 +2589,7 @@ body.visible .canvas-wrapper-home {
 
 .home-wrapper {
   width: 100%;
-  height: 100%;
+  height: 200%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2687,15 +2687,15 @@ body.visible .canvas-wrapper-home {
   transition: all 0.3s ease-in-out;
   position: relative;
   top: 0;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5); }
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.5); }
   .project-container:hover {
-    transform: scale(1.03);
-    top: -10px;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.75); }
+    top: -5px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.75); }
   .project-container:last-child {
     flex: 0 0 40%; }
 
@@ -2703,7 +2703,9 @@ body.visible .canvas-wrapper-home {
   background: blue;
   justify-self: flex-start;
   width: 100%;
-  height: 285px; }
+  height: 285px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
 
 .tags-wrapper {
   margin-top: auto; }
@@ -2850,7 +2852,24 @@ body.visible .canvas-wrapper-cursus {
       height: 6px;
       background-color: black;
       margin: 6px 0;
-      border-radius: 3px; }
+      border-radius: 3px;
+      position: relative; }
+  .page-header .menu-icon-wrapper.in .menu-icon-line:nth-child(3) {
+    -webkit-animation: bounce-bottom 0.9s both;
+    animation: bounce-bottom 0.5s both; }
+  .page-header .menu-icon-wrapper.in .menu-icon-line:nth-child(1) {
+    -webkit-animation: bounce-top 0.9s both;
+    animation: bounce-top 0.5s both; }
+  .page-header .menu-icon-wrapper.out .menu-icon-line:nth-child(3) {
+    -webkit-animation: bounce-bottom 0.9s both;
+    animation: bounce-bottom 0.5s both;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse; }
+  .page-header .menu-icon-wrapper.out .menu-icon-line:nth-child(1) {
+    -webkit-animation: bounce-top 0.9s both;
+    animation: bounce-top 0.5s both;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse; }
 
 @keyframes slide-in-bottom {
   0% {
@@ -2871,6 +2890,26 @@ body.visible .canvas-wrapper-cursus {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; } }
+
+@keyframes bounce-bottom {
+  0% {
+    bottom: 0; }
+  25% {
+    transform: rotateZ(30deg); }
+  75% {
+    transform: rotateZ(0deg); }
+  100% {
+    bottom: -8px; } }
+
+@keyframes bounce-top {
+  0% {
+    bottom: 0; }
+  25% {
+    transform: rotateZ(-30deg); }
+  75% {
+    transform: rotateZ(0deg); }
+  100% {
+    bottom: 8px; } }
 
 .startup {
   display: flex;

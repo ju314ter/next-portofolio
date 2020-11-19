@@ -17,12 +17,23 @@ const Nav = withNavigationContext(({ fullpage }) => {
     console.log(currPos.y)
   })
 
+
+  function fn(isEnter) {
+    requestAnimationFrame(() => {
+      // execute in same frame
+      requestAnimationFrame(() => {
+        // execute in next frame
+        document.querySelector('.menu-icon-wrapper').className = isEnter ? "menu-icon-wrapper in" : "menu-icon-wrapper out";
+      });
+    });
+  }
+
   return (
     <>
       <header className="page-header">
         <div className="logo">
           <ReactLogo />
-          <p style={slug === "page-projects" ? { color: 'white' } : null}>Workshop</p>
+          <p style={slug === "page-projects" || slug === "page-contact" ? { color: 'white' } : null}>Workshop</p>
         </div>
         <div className="menu" onClick={() => {
           setMenuVisibility(!menuVisibility);
@@ -31,7 +42,9 @@ const Nav = withNavigationContext(({ fullpage }) => {
             el.style.animationDelay = (i + 1) * 200 + 'ms';
           });
         }}>
-          <div className="menu-icon-wrapper">
+          <div className="menu-icon-wrapper"
+            onMouseEnter={() => { fn(true) }}
+            onMouseLeave={() => { fn(false) }}>
             <div className="menu-icon-line"></div>
             <div className="menu-icon-line"></div>
             <div className="menu-icon-line"></div>
