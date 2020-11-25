@@ -2,11 +2,79 @@
     "title": "Experiences et formations",
     "formations": [
         {
-            "date": "",
-            "intitule": "",
+            "date": "2007/2010",
+            "intitule": "Baccalauréat type S",
+            "soustitre": "Specialité Science de la Vie et de la Terre",
+            "acquis": [
+                "Option chinois",
+                "Math: 15/20",
+                "Physique-chimie : 17/20",
+                "S.V.T: 14/20"
+            ],
             "illustrationPath": "",
-            "typeExperience": "",
-            "description": ""
+            "typeExperience": "formation + diplome mention bien",
+            "description": "Lycée Bellevue, Le Mans"
+        },
+        {
+            "date": "2010/2011",
+            "intitule": "PACES",
+            "soustitre": "(Première année commune aux études de médecine)",
+            "acquis": [
+                "Méthodologie laborantine",
+                "Gestion de projets santé",
+                "Découverte du monde de la recherche"
+            ],
+            "illustrationPath": "",
+            "typeExperience": "formation",
+            "description": "Faculté de medecine d'Angers"
+        },
+        {
+            "date": "2011/2014",
+            "intitule": "Licence IMS (Ingénierie et Management de la Santé)",
+            "soustitre": "bac+3",
+            "acquis": [
+                "Management de la qualité",
+                "Gestion de projets santé",
+                "Analyse de données de santé",
+                "Découverte du monde de la recherche"
+            ],
+            "illustrationPath": "",
+            "typeExperience": "formation + diplome",
+            "description": "Polytech Angers"
+        },
+        {
+            "date": "2015/2017",
+            "intitule": "Première et seconde année cycle ingénieur",
+            "soustitre": "Options réseaux et E-santé",
+            "acquis": [
+                "Analyse de données (R, Matlab)",
+                "E-santé et réseaux",
+                "Veille scientifique orienté santé",
+                "Gestion financière"
+            ],
+            "illustrationPath": "",
+            "typeExperience": "formation",
+            "description": "Ecole supérieur d'ingénieur en électronique et électrotechnique Paris, Noisy-le-grand"
+        },
+        {
+            "date": "2017/2018",
+            "intitule": "Entrepreneur Social",
+            "soustitre": "",
+            "illustrationPath": "",
+            "typeExperience": "service civique",
+            "description": "Porteur de projet solidaire pour Unis'Cité dans le cadre de la lutte contre l'isolement social, Nantes"
+        },
+        {
+            "date": "2018/2020",
+            "intitule": "Titre RNCP: Concepteur développeur d'applications nouvelles technologies",
+            "soustitre": "bac +4",
+            "acquis": [
+                "8 mois de C# au Crédit Mutuel, Fontenay-sous-bois",
+                "16 mois  d'Angular chez Hypecode, Vincennes"
+            ],
+            "illustrationPath": "",
+            "typeExperience": "alternance + diplome",
+            "description": "Ecole Aston (groupe SQLI), qualification de niveau 7, Arceuil Cachan"
         }
     ]
 }

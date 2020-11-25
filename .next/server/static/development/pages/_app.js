@@ -161,9 +161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-awesome-slider/dist/navigation */ "react-awesome-slider/dist/navigation");
 /* harmony import */ var react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @n8tb1t/use-scroll-position */ "@n8tb1t/use-scroll-position");
-/* harmony import */ var _n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _react_logo_react_logo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../react-logo/react-logo */ "./components/react-logo/react-logo.js");
+/* harmony import */ var _react_logo_react_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../react-logo/react-logo */ "./components/react-logo/react-logo.js");
+/* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spring */ "react-spring");
+/* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spring__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav.scss */ "./components/nav/nav.scss");
 /* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nav_scss__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "D:\\Repositories\\JFWorkshop-next\\jfworkshop\\components\\nav\\nav.js";
@@ -179,34 +179,24 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
   const {
     slug
   } = fullpage.navigation;
+  const color = slug === "" || slug === "page-contact" || slug === "page-cursus" ? 'white' : 'black';
   const {
     0: menuVisibility,
     1: setMenuVisibility
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  Object(_n8tb1t_use_scroll_position__WEBPACK_IMPORTED_MODULE_2__["useScrollPosition"])(({
-    prevPos,
-    currPos
-  }) => {
-    console.log(currPos.x);
-    console.log(currPos.y);
-  });
-
-  function fn(isEnter) {
-    requestAnimationFrame(() => {
-      // execute in same frame
-      requestAnimationFrame(() => {
-        // execute in next frame
-        document.querySelector('.menu-icon-wrapper').className = isEnter ? "menu-icon-wrapper in" : "menu-icon-wrapper out";
-      });
-    });
-  }
-
+  const [{
+    y,
+    z
+  }, set] = Object(react_spring__WEBPACK_IMPORTED_MODULE_3__["useSpring"])(() => ({
+    y: 0,
+    z: 0
+  }));
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("header", {
     className: "page-header",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 21,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -214,24 +204,24 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 22,
       columnNumber: 9
     }
-  }, __jsx(_react_logo_react_logo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_react_logo_react_logo__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 23,
       columnNumber: 11
     }
   }), __jsx("p", {
-    style: slug === "page-projects" || slug === "page-contact" ? {
-      color: 'white'
-    } : null,
+    style: {
+      color: color
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 24,
       columnNumber: 11
     }
   }, "Workshop")), __jsx("div", {
@@ -246,45 +236,64 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 26,
       columnNumber: 9
     }
   }, __jsx("div", {
     className: "menu-icon-wrapper",
     onMouseEnter: () => {
-      fn(true);
+      set({
+        y: 8,
+        z: 100
+      });
     },
     onMouseLeave: () => {
-      fn(false);
+      set({
+        y: 0,
+        z: 0
+      });
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 33,
       columnNumber: 11
     }
-  }, __jsx("div", {
+  }, __jsx(react_spring__WEBPACK_IMPORTED_MODULE_3__["animated"].div, {
     className: "menu-icon-line",
+    style: {
+      background: color,
+      transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(-${v}deg)`),
+      bottom: y.interpolate(v => `${v}px`)
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 37,
       columnNumber: 13
     }
   }), __jsx("div", {
     className: "menu-icon-line",
+    style: {
+      background: color
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 38,
       columnNumber: 13
     }
-  }), __jsx("div", {
+  }), __jsx(react_spring__WEBPACK_IMPORTED_MODULE_3__["animated"].div, {
     className: "menu-icon-line",
+    style: {
+      background: color,
+      transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(${v}deg)`),
+      bottom: y.interpolate(v => `-${v}px`)
+    },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 39,
       columnNumber: 13
     }
   })))), __jsx("div", {
@@ -296,14 +305,14 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 43,
       columnNumber: 7
     }
   }, __jsx("nav", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 49,
       columnNumber: 9
     }
   }, __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -312,7 +321,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 50,
       columnNumber: 11
     }
   }, "Home"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -321,7 +330,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 53,
       columnNumber: 11
     }
   }, "Projects"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -330,7 +339,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 59,
       columnNumber: 11
     }
   }, "Cursus"), __jsx(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -339,7 +348,7 @@ const Nav = Object(react_awesome_slider_dist_navigation__WEBPACK_IMPORTED_MODULE
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 65,
       columnNumber: 11
     }
   }, "Contact"))));
@@ -641,17 +650,6 @@ module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_
 
 /***/ }),
 
-/***/ "@n8tb1t/use-scroll-position":
-/*!**********************************************!*\
-  !*** external "@n8tb1t/use-scroll-position" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@n8tb1t/use-scroll-position");
-
-/***/ }),
-
 /***/ "core-js/library/fn/object/assign":
 /*!***************************************************!*\
   !*** external "core-js/library/fn/object/assign" ***!
@@ -704,6 +702,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-awesome-slider/dist/navigation");
+
+/***/ }),
+
+/***/ "react-spring":
+/*!*******************************!*\
+  !*** external "react-spring" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-spring");
 
 /***/ })
 

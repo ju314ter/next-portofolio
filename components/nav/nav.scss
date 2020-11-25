@@ -88,6 +88,7 @@
     cursor: pointer;
 
     .menu-icon-line {
+      bottom: 0;
       width: 35px;
       height: 6px;
       background-color: black;
@@ -97,31 +98,31 @@
     }
   }
 
-  .menu-icon-wrapper.in {
-      .menu-icon-line:nth-child(3) {
-        	-webkit-animation: bounce-bottom 0.9s both;
-          animation: bounce-bottom 0.5s both;
-      }
-      .menu-icon-line:nth-child(1) {
-        	-webkit-animation: bounce-top 0.9s both;
-          animation: bounce-top 0.5s both;
-      }
-  }
+  // .menu-icon-wrapper.in {
+  //     .menu-icon-line:nth-child(3) {
+  //       	-webkit-animation: bounce-bottom 0.9s both;
+  //         animation: bounce-bottom 0.5s both;
+  //     }
+  //     .menu-icon-line:nth-child(1) {
+  //       	-webkit-animation: bounce-top 0.9s both;
+  //         animation: bounce-top 0.5s both;
+  //     }
+  // }
 
-  .menu-icon-wrapper.out {
-      .menu-icon-line:nth-child(3) {
-      	-webkit-animation: bounce-bottom 0.9s both;
-        animation: bounce-bottom 0.5s both;
-        -webkit-animation-direction: reverse;
-        animation-direction: reverse;
-    }
-    .menu-icon-line:nth-child(1) {
-      	-webkit-animation: bounce-top 0.9s both;
-        animation: bounce-top 0.5s both;
-        -webkit-animation-direction: reverse;
-        animation-direction: reverse;
-    }
-  }
+  // .menu-icon-wrapper.out {
+  //     .menu-icon-line:nth-child(3) {
+  //     	-webkit-animation: bounce-bottom 0.9s both;
+  //       animation: bounce-bottom 0.5s both;
+  //       -webkit-animation-direction: reverse;
+  //       animation-direction: reverse;
+  //   }
+  //   .menu-icon-line:nth-child(1) {
+  //     	-webkit-animation: bounce-top 0.9s both;
+  //       animation: bounce-top 0.5s both;
+  //       -webkit-animation-direction: reverse;
+  //       animation-direction: reverse;
+  //   }
+  // }
 }
 
 
@@ -148,35 +149,5 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
-  }
-}
-
-@keyframes bounce-bottom {
-  0% {
-    bottom: 0;
-  }
-  25% {
-    transform: rotateZ(30deg)
-  }
-  75% {
-    transform: rotateZ(0deg)
-  }
-  100% {
-    bottom: -8px;
-  }
-}
-
-@keyframes bounce-top {
-  0% {
-    bottom: 0;
-  }
-  25% {
-    transform: rotateZ(-30deg)
-  }
-  75% {
-    transform: rotateZ(0deg)
-  }
-  100% {
-    bottom: 8px;
   }
 }

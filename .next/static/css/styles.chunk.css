@@ -2575,6 +2575,10 @@ select {
 .home-page .page {
   background: whitesmoke; }
 
+@media screen and (max-width: 1024px) {
+  .bg-home {
+    height: 100%; } }
+
 .canvas-wrapper-home {
   position: absolute;
   top: 0;
@@ -2582,20 +2586,22 @@ select {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease-in-out;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 10; }
 
 body.visible .canvas-wrapper-home {
   opacity: 1; }
 
 .home-wrapper {
   width: 100%;
-  height: 200%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   perspective: 1200px;
-  text-align: center; }
+  text-align: center;
+  color: #fafafa; }
   .home-wrapper h1 {
     font-family: Open Sans;
     font-size: 50px; }
@@ -2736,7 +2742,15 @@ body.visible .canvas-wrapper-projects {
   perspective: 1200px; }
 
 .cursus-page .page {
-  background: whitesmoke; }
+  background: #0b1a3a; }
+
+.bg-front {
+  position: fixed;
+  bottom: 0;
+  z-index: 11; }
+
+.canvas-wrapper-projects {
+  z-index: 10; }
 
 .canvas-wrapper-cursus {
   position: absolute;
@@ -2848,28 +2862,13 @@ body.visible .canvas-wrapper-cursus {
     z-index: 1500;
     cursor: pointer; }
     .page-header .menu-icon-wrapper .menu-icon-line {
+      bottom: 0;
       width: 35px;
       height: 6px;
       background-color: black;
       margin: 6px 0;
       border-radius: 3px;
       position: relative; }
-  .page-header .menu-icon-wrapper.in .menu-icon-line:nth-child(3) {
-    -webkit-animation: bounce-bottom 0.9s both;
-    animation: bounce-bottom 0.5s both; }
-  .page-header .menu-icon-wrapper.in .menu-icon-line:nth-child(1) {
-    -webkit-animation: bounce-top 0.9s both;
-    animation: bounce-top 0.5s both; }
-  .page-header .menu-icon-wrapper.out .menu-icon-line:nth-child(3) {
-    -webkit-animation: bounce-bottom 0.9s both;
-    animation: bounce-bottom 0.5s both;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse; }
-  .page-header .menu-icon-wrapper.out .menu-icon-line:nth-child(1) {
-    -webkit-animation: bounce-top 0.9s both;
-    animation: bounce-top 0.5s both;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse; }
 
 @keyframes slide-in-bottom {
   0% {
@@ -2890,26 +2889,6 @@ body.visible .canvas-wrapper-cursus {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; } }
-
-@keyframes bounce-bottom {
-  0% {
-    bottom: 0; }
-  25% {
-    transform: rotateZ(30deg); }
-  75% {
-    transform: rotateZ(0deg); }
-  100% {
-    bottom: -8px; } }
-
-@keyframes bounce-top {
-  0% {
-    bottom: 0; }
-  25% {
-    transform: rotateZ(-30deg); }
-  75% {
-    transform: rotateZ(0deg); }
-  100% {
-    bottom: 8px; } }
 
 .startup {
   display: flex;

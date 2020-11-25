@@ -6,7 +6,7 @@ module.exports = withCSS(withSass({
         config.module.rules.push({
             test: /\.svg$/,
             issuer: {
-                test: /\.(js|ts)x?$/,
+                test: /\.(js|ts|css|scss)x?$/,
             },
             use: ['@svgr/webpack'],
         });

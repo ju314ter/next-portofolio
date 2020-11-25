@@ -3,37 +3,25 @@ import {
   withNavigationContext,
   Link
 } from "react-awesome-slider/dist/navigation";
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import ReactLogo from "../react-logo/react-logo";
+
+import { useSpring, animated } from "react-spring";
+
 import "./nav.scss";
 
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
+  const color = slug === "" || slug === "page-contact" || slug === "page-cursus" ? 'white' : 'black';
   const [menuVisibility, setMenuVisibility] = useState(false);
-
-  useScrollPosition(({ prevPos, currPos }) => {
-    console.log(currPos.x)
-    console.log(currPos.y)
-  })
-
-
-  function fn(isEnter) {
-    requestAnimationFrame(() => {
-      // execute in same frame
-      requestAnimationFrame(() => {
-        // execute in next frame
-        document.querySelector('.menu-icon-wrapper').className = isEnter ? "menu-icon-wrapper in" : "menu-icon-wrapper out";
-      });
-    });
-  }
+  const [{ y, z }, set] = useSpring(() => ({ y: 0, z: 0 }))
 
   return (
     <>
       <header className="page-header">
         <div className="logo">
           <ReactLogo />
-          <p style={slug === "page-projects" || slug === "page-contact" ? { color: 'white' } : null}>Workshop</p>
+          <p style={{ color: color }}>Workshop</p>
         </div>
         <div className="menu" onClick={() => {
           setMenuVisibility(!menuVisibility);
@@ -43,11 +31,12 @@ const Nav = withNavigationContext(({ fullpage }) => {
           });
         }}>
           <div className="menu-icon-wrapper"
-            onMouseEnter={() => { fn(true) }}
-            onMouseLeave={() => { fn(false) }}>
-            <div className="menu-icon-line"></div>
-            <div className="menu-icon-line"></div>
-            <div className="menu-icon-line"></div>
+            onMouseEnter={() => { set({ y: 8, z: 100 }) }}
+            onMouseLeave={() => { set({ y: 0, z: 0 }) }}
+          >
+            <animated.div className="menu-icon-line" style={{ background: color, transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(-${v}deg)`), bottom: y.interpolate(v => `${v}px`) }}></animated.div>
+            <div className="menu-icon-line" style={{ background: color }}></div>
+            <animated.div className="menu-icon-line" style={{ background: color, transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(${v}deg)`), bottom: y.interpolate(v => `-${v}px`) }}></animated.div>
           </div>
         </div>
       </header>

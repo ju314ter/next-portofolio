@@ -5,6 +5,8 @@ import Particles from 'react-particles-js';
 
 import './cursus.scss'
 
+import BackgroundFront from '../../public/bg-front-cursus.svg';
+
 export const CursusPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page>
@@ -15,23 +17,23 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 6,
+                            "value": 150,
                             "density": {
                                 "enable": true,
-                                "value_area": 800
+                                "value_area": 794.59250432078807
                             }
                         },
                         "color": {
-                            "value": "#1b1e34"
+                            "value": "#bebefc"
                         },
                         "shape": {
-                            "type": "polygon",
+                            "type": "circle",
                             "stroke": {
                                 "width": 0,
-                                "color": "#000"
+                                "color": "#000000"
                             },
                             "polygon": {
-                                "nb_sides": 6
+                                "nb_sides": 3
                             },
                             "image": {
                                 "src": "img/github.svg",
@@ -40,44 +42,44 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                             }
                         },
                         "opacity": {
-                            "value": 0.3,
+                            "value": 1,
                             "random": true,
                             "anim": {
-                                "enable": false,
+                                "enable": true,
                                 "speed": 1,
-                                "opacity_min": 0.1,
+                                "opacity_min": 0,
                                 "sync": false
                             }
                         },
                         "size": {
-                            "value": 120,
-                            "random": false,
+                            "value": 3,
+                            "random": true,
                             "anim": {
-                                "enable": true,
-                                "speed": 10,
-                                "size_min": 40,
+                                "enable": false,
+                                "speed": 4,
+                                "size_min": 0.3,
                                 "sync": false
                             }
                         },
                         "line_linked": {
                             "enable": false,
-                            "distance": 200,
+                            "distance": 150,
                             "color": "#ffffff",
-                            "opacity": 1,
-                            "width": 2
+                            "opacity": 0.4,
+                            "width": 1
                         },
                         "move": {
                             "enable": true,
-                            "speed": 4.313480069132608,
-                            "direction": "top-right",
-                            "random": false,
-                            "straight": true,
+                            "speed": 0.5,
+                            "direction": "none",
+                            "random": true,
+                            "straight": false,
                             "out_mode": "out",
-                            "bounce": true,
+                            "bounce": false,
                             "attract": {
                                 "enable": false,
                                 "rotateX": 600,
-                                "rotateY": 1200
+                                "rotateY": 600
                             }
                         }
                     },
@@ -85,12 +87,12 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                         "detect_on": "canvas",
                         "events": {
                             "onhover": {
-                                "enable": false,
-                                "mode": "repulse"
+                                "enable": true,
+                                "mode": "bubble"
                             },
                             "onclick": {
                                 "enable": false,
-                                "mode": "push"
+                                "mode": "repulse"
                             },
                             "resize": true
                         },
@@ -102,14 +104,14 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                                 }
                             },
                             "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
+                                "distance": 97.38283627510657,
+                                "size": 16.230472712517763,
+                                "duration": 3.083789815378375,
+                                "opacity": 0,
                                 "speed": 3
                             },
                             "repulse": {
-                                "distance": 200,
+                                "distance": 400,
                                 "duration": 0.4
                             },
                             "push": {
@@ -125,6 +127,7 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
             <div className="cursus-wrapper">
                 <p>This is cursus page</p>
             </div>
+            <BackgroundFront className='bg-front' />
         </Page>
     )
 });

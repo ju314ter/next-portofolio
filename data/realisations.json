@@ -1,16 +1,127 @@
 {
-    "title": "Realisations",
+    "title": "Realisations personelles",
     "realisations": [
         {
-            "projectName": "",
+            "projectName": "Portfolio v1",
             "repoPath": "",
             "illustrationPath": "",
             "tags": [
-                "",
+                "jQuery",
+                "vanilla",
+                ""
+            ],
+            "description": "First version of my portfolio as an intern."
+        },
+        {
+            "projectName": "Portfolio v2",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "react",
+                "react-awesome-slider",
+                "react-spring"
+            ],
+            "description": "Second version of my portfolio as a junior web developper."
+        },
+        {
+            "projectName": "Catalogue App",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "react-native",
+                "headless CMS",
+                ""
+            ],
+            "description": "Catalogue application for assisting the salesforce of a bakery. Content is updated through datoCMS publishing. Unmaintained."
+        },
+        {
+            "projectName": "TFT wiki",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "react-native",
                 "",
                 ""
             ],
+            "description": "Wiki application about the riot game Teamfight Tactics"
+        },
+        {
+            "projectName": "Landing page builder",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "angular",
+                "NgRx",
+                "typescript"
+            ],
+            "description": "Concept using NgRx store provider and angular drag and drop capabilities to create a website landing page builder. Output json config."
+        },
+        {
+            "projectName": "Mockup travel agency",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "php",
+                "symfony",
+                "mysql"
+            ],
             "description": ""
+        },
+        {
+            "projectName": "Wordpress personnal website",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "wordpress",
+                "elementor",
+                ""
+            ],
+            "description": "Wordpress for an art-therapist online cursus"
+        },
+        {
+            "projectName": "MixR: eat and meet",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "wordpress",
+                "buddypress",
+                ""
+            ],
+            "description": "Wordpress concept to plan dinners at home with strangers in order to fight against social isolation"
+        },
+        {
+            "projectName": "Catch'up",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "react-native",
+                "firebase",
+                "heroku",
+                "expo"
+            ],
+            "description": "Dating app prototype based on gaming affinity. I used heroku for continuous delivery. Unmaintained"
+        },
+        {
+            "projectName": "DeliCat",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "wordpress",
+                "woocommerce",
+                ""
+            ],
+            "description": "Wordpress online shop for a gluten and lactose free bakery project"
+        },
+        {
+            "projectName": "Online manga reader",
+            "repoPath": "",
+            "illustrationPath": "",
+            "tags": [
+                "angular",
+                "scrapping",
+                ""
+            ],
+            "description": "Client side manga scrapper and online reader. Unmaintained"
         }
     ]
 }

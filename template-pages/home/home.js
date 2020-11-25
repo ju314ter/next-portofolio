@@ -5,6 +5,8 @@ import Particles from 'react-particles-js';
 
 import './home.scss'
 
+import Background from '../../public/home-bg.svg';
+
 import Angular from '../../public/angular.svg';
 import Git from '../../public/git.svg';
 import Gitlab from '../../public/gitlab.svg';
@@ -31,7 +33,7 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                             }
                         },
                         "color": {
-                            "value": "#1b1e34"
+                            "value": "#fff"
                         },
                         "size": {
                             "value": 3,
@@ -76,6 +78,7 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                         }
                     }
                 }} />
+            <Background style={{ position: 'absolute' }} className="bg-home" />
             <div className="home-wrapper">
                 <div className="title">
                     <h1>Julien FEGER</h1>
