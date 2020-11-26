@@ -127,9 +127,18 @@ export const ContactPage = withNavigationContext(({ fullpage }) => {
                     "retina_detect": true
                 }} />
             <div className="contact-wrapper">
-                <Github height={250} />
-                <Stackoverflow height={250} />
-                <Linkedin height={250} />
+                <span style={{ fontSize: 25, fontFamily: 'Encode Sans', color: '#fafafa', margin: 25, textAlign: 'center' }}>Let's get to know each other !</span>
+                <div className="icons">
+                    <div className="icon-wrapper">
+                        <Github />
+                    </div>
+                    <div className="icon-wrapper">
+                        <Stackoverflow />
+                    </div>
+                    <div className="icon-wrapper">
+                        <Linkedin />
+                    </div>
+                </div>
             </div>
         </Page>
     )
