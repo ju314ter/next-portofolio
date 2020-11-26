@@ -4,8 +4,16 @@
 
 .bg-front {
     position: fixed;
-    bottom: 0;
+    bottom: -190px;
     z-index: 11;
+
+    @media screen and (max-width:2260px) {
+        bottom: -100px;
+    }
+
+    @media screen and (max-width:768px) {
+        bottom: 0;
+    }
 }
 
 .canvas-wrapper-projects {

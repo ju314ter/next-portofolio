@@ -1,48 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
 import Project from '../../components/project/project';
 
+
 import './projects.scss'
+import projectsData from '../../data/realisations.json'
 
 export const ProjectsPage = withNavigationContext(({ fullpage }) => {
 
-    const tab = [1, 2, 3, 4]
-    const obj = { 1: 1, 2: 2, 3: 3, 4: 4 }
-
-    const [projects, setProjects] = useState({
-        project1: {
-            imgPath: "",
-            title: "",
-            desc: "",
-            tags: ["", ""]
-        },
-        project2: {
-            imgPath: "",
-            title: "",
-            desc: "",
-            tags: ["", ""]
-        },
-        project3: {
-            imgPath: "",
-            title: "",
-            desc: "",
-            tags: ["", ""]
-        },
-        project4: {
-            imgPath: "",
-            title: "",
-            desc: "",
-            tags: ["", ""]
-        },
-        project5: {
-            imgPath: "",
-            title: "",
-            desc: "",
-            tags: ["", ""]
-        }
-    })
+    const [projects, setProjects] = useState(projectsData.realisations)
 
     return (
         <Page>
@@ -55,6 +23,13 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                 {Object.entries(projects).map((project, i) => {
                     return <Project project={project[1]} key={i} />
                 })}
+            </div>
+            <div className="clouds noselect">
+                <img src="/cloud1.png" alt="cloud" className="cloud noselect"></img>
+                <img src="/cloud2.png" alt="cloud" className="cloud noselect"></img>
+                <img src="/cloud3.png" alt="cloud" className="cloud noselect"></img>
+                <img src="/cloud4.png" alt="cloud" className="cloud noselect"></img>
+                <img src="/cloud5.png" alt="cloud" className="cloud noselect"></img>
             </div>
         </Page>
     )

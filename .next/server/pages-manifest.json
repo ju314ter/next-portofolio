@@ -1,1 +1,7 @@
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/page-projects":"static/development/pages/page-projects.js","/":"static/development/pages/index.js"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/page-projects": "pages/page-projects.js",
+  "/page-cursus": "pages/page-cursus.js"
+}

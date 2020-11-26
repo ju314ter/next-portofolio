@@ -4,7 +4,7 @@
         {
             "projectName": "Portfolio v1",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/jfworkshop.png",
             "tags": [
                 "jQuery",
                 "vanilla",
@@ -15,7 +15,7 @@
         {
             "projectName": "Portfolio v2",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/portfolioV2.JPG",
             "tags": [
                 "react",
                 "react-awesome-slider",
@@ -24,9 +24,21 @@
             "description": "Second version of my portfolio as a junior web developper."
         },
         {
-            "projectName": "Catalogue App",
+            "projectName": "Aile du Maine",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/jfworkshop.png",
+            "tags": [
+                "react",
+                "GatsbyJS",
+                "Netlify"
+            ],
+            "description": "Online website for Le Mans Glider association \"Les Ailes du Maine\""
+        },
+        {
+            "projectName": "Catalogue App",
+            "portrait": true,
+            "repoPath": "",
+            "illustrationPath": "/projets/patisserie2.PNG",
             "tags": [
                 "react-native",
                 "headless CMS",
@@ -37,7 +49,8 @@
         {
             "projectName": "TFT wiki",
             "repoPath": "",
-            "illustrationPath": "",
+            "portrait": true,
+            "illustrationPath": "/projets/jfworkshop.png",
             "tags": [
                 "react-native",
                 "",
@@ -48,7 +61,7 @@
         {
             "projectName": "Landing page builder",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/lpbuilder.png",
             "tags": [
                 "angular",
                 "NgRx",
@@ -59,7 +72,7 @@
         {
             "projectName": "Mockup travel agency",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/VPT.png",
             "tags": [
                 "php",
                 "symfony",
@@ -70,7 +83,7 @@
         {
             "projectName": "Wordpress personnal website",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/helwu.PNG",
             "tags": [
                 "wordpress",
                 "elementor",
@@ -81,7 +94,7 @@
         {
             "projectName": "MixR: eat and meet",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/mixr.png",
             "tags": [
                 "wordpress",
                 "buddypress",
@@ -91,8 +104,9 @@
         },
         {
             "projectName": "Catch'up",
+            "portrait": true,
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/matcher.PNG",
             "tags": [
                 "react-native",
                 "firebase",
@@ -104,7 +118,7 @@
         {
             "projectName": "DeliCat",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/delicat.png",
             "tags": [
                 "wordpress",
                 "woocommerce",
@@ -115,7 +129,7 @@
         {
             "projectName": "Online manga reader",
             "repoPath": "",
-            "illustrationPath": "",
+            "illustrationPath": "/projets/jfworkshop.png",
             "tags": [
                 "angular",
                 "scrapping",
