@@ -35,28 +35,23 @@
     border-top-right-radius: 13px;
 }
 
-.content-wrapper {
+
+.desc-wrapper {
+    display: flex;
     position: relative;
     display: flex;
     flex: 0 0 40%;
     max-width: 100%;
     overflow: hidden;
-
-    .desc-wrapper {
-        display: flex;
-        flex: 0 0 100%;
-        max-width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: Encode Sans;
-        color: #fafafa;
-        text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Encode Sans;
+    color: #fafafa;
+    text-align: center;
     
-        span {
-            font-family: Open Sans;;
-        }
+    span {
+        font-family: Open Sans;;
     }
     
     .tags-wrapper {
@@ -73,7 +68,7 @@
         align-items: center;
         border-bottom-left-radius: 13px;
         border-bottom-right-radius: 13px;
-
+    
         .tag {
             position: relative;
             text-transform: uppercase;
@@ -87,3 +82,4 @@
         }
     }
 }
+    
