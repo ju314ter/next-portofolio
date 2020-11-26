@@ -1,39 +1,89 @@
 .project-container {
     min-width: 320px;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
     flex: 1 0 40%;
     height: 55vh;
     margin: 10px;
+    margin-bottom: 20px;
     background: #0b1a3aaa;
     transition: all 0.3s ease-in-out;
     position: relative;
     top: 0;
     border-radius: 15px;
 
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.5);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.5);
-    box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.5);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(99, 112, 172, 0.4);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(99, 112, 172, 0.4);
+    box-shadow: 0px 0px 8px 0px rgba(99, 112, 172, 0.4);
 
     &:hover {
         // transform: scale(1.03);
         top: -5px;
-        -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
-        -moz-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
-        box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.6);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.6);
+        box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.6);
 
     }
 }
 
 .img-wrapper {
-    background: blue;
-    justify-self: flex-start;
+    cursor: pointer;
+    flex: 1 0 60%;
     width: 100%;
-    height: 285px;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
 
-.tags-wrapper {
-    margin-top: auto;
+.content-wrapper {
+    position: relative;
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 100%;
+    overflow: hidden;
+
+    .desc-wrapper {
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Encode Sans;
+        color: #fafafa;
+        text-align: center;
+    
+        span {
+            font-family: Open Sans;;
+        }
+    }
+    
+    .tags-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(16,4,47);
+        background: linear-gradient(41deg, rgba(16,4,47,1) 10%, rgba(11,28,76,1) 33%, rgba(1,1,16,1) 90%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 13px;
+        border-bottom-right-radius: 13px;
+
+        .tag {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: Encode Sans;
+            margin: 10px;
+            padding: 10px;
+            background: #cacaca;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+    }
 }

@@ -2530,6 +2530,11 @@ data-uri-to-buffer@3.0.0:
   dependencies:
     buffer-from "^1.1.1"
 
+debounce@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
+  integrity sha512-mYtLl1xfZLi1m4RtQYlZgJUNQjl4ZxVnHzIR8nLLgi4q1YT8o/WM+MK/f8yfcc9s5Ir5zRaPZyZU6xs1Syoocg==
+
 debug@4:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
@@ -5371,10 +5376,12 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-use-scroll-position@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-use-scroll-position/-/react-use-scroll-position-2.0.0.tgz#c5bb29f751d126ff1c0306c28d7055ce0d4ef034"
-  integrity sha512-nQaWMPElzI8aN1vYTnqy0xV17pEhItgyWUBOtdmMEqsbY1mV3+iZMyTeAJ+oegsQIugYxBU4LnV2NosynN+KKA==
+react-use-measure@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-use-measure/-/react-use-measure-2.0.3.tgz#7b56ae3ca19ccf62326933678625a8ff6b3f90a3"
+  integrity sha512-57O8Os9MbgFEHuOHOXNdPmBHhXjCBIwtB3YxyrM/MgaX44a1o97Mu9YqiOA6cAF8kXIw4fO3XK0r2Taa4SqaqQ==
+  dependencies:
+    debounce "^1.2.0"
 
 react@16.12.0:
   version "16.12.0"

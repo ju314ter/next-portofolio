@@ -16,7 +16,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
   const [{ y, z, color }, set] = useSpring(() => ({ y: 0, z: 0, color: '#fff' }))
 
   useEffect(() => {
-    if (fullpage.navigation.slug === 'page-projects') {
+    if (fullpage.navigation.slug === 'page-cursus') {
       set({ color: '#000' })
     } else {
       set({ color: '#fff' })

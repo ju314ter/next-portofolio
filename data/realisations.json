@@ -7,15 +7,14 @@
             "illustrationPath": "/projets/jfworkshop.png",
             "tags": [
                 "jQuery",
-                "vanilla",
-                ""
+                "vanilla"
             ],
             "description": "First version of my portfolio as an intern."
         },
         {
             "projectName": "Portfolio v2",
             "repoPath": "",
-            "illustrationPath": "/projets/portfolioV2.JPG",
+            "illustrationPath": "/projets/portfoliov2.JPG",
             "tags": [
                 "react",
                 "react-awesome-slider",
@@ -26,7 +25,7 @@
         {
             "projectName": "Aile du Maine",
             "repoPath": "",
-            "illustrationPath": "/projets/jfworkshop.png",
+            "illustrationPath": "/projets/ADM.jpg",
             "tags": [
                 "react",
                 "GatsbyJS",
@@ -41,8 +40,7 @@
             "illustrationPath": "/projets/patisserie2.PNG",
             "tags": [
                 "react-native",
-                "headless CMS",
-                ""
+                "headless CMS"
             ],
             "description": "Catalogue application for assisting the salesforce of a bakery. Content is updated through datoCMS publishing. Unmaintained."
         },
@@ -50,11 +48,10 @@
             "projectName": "TFT wiki",
             "repoPath": "",
             "portrait": true,
-            "illustrationPath": "/projets/jfworkshop.png",
+            "illustrationPath": "/projets/tft1.jpg",
             "tags": [
                 "react-native",
-                "",
-                ""
+                "expo"
             ],
             "description": "Wiki application about the riot game Teamfight Tactics"
         },
@@ -86,8 +83,7 @@
             "illustrationPath": "/projets/helwu.PNG",
             "tags": [
                 "wordpress",
-                "elementor",
-                ""
+                "elementor"
             ],
             "description": "Wordpress for an art-therapist online cursus"
         },
@@ -97,8 +93,7 @@
             "illustrationPath": "/projets/mixr.png",
             "tags": [
                 "wordpress",
-                "buddypress",
-                ""
+                "buddypress"
             ],
             "description": "Wordpress concept to plan dinners at home with strangers in order to fight against social isolation"
         },
@@ -121,8 +116,7 @@
             "illustrationPath": "/projets/delicat.png",
             "tags": [
                 "wordpress",
-                "woocommerce",
-                ""
+                "woocommerce"
             ],
             "description": "Wordpress online shop for a gluten and lactose free bakery project"
         },
@@ -132,8 +126,7 @@
             "illustrationPath": "/projets/jfworkshop.png",
             "tags": [
                 "angular",
-                "scrapping",
-                ""
+                "scrapping"
             ],
             "description": "Client side manga scrapper and online reader. Unmaintained"
         }
