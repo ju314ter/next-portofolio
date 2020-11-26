@@ -6,7 +6,7 @@ const Project = (projectData, key) => {
     const { project } = projectData
 
     useEffect(() => {
-        console.log(project)
+        // console.log(project)
         return () => {
 
         }
@@ -21,8 +21,8 @@ const Project = (projectData, key) => {
                 <div className="description">{project.description}</div>
             </div>
             <div className="tags-wrapper">
-                {project.tags.map((tag) => {
-                    return <div className="tag">{tag}</div>
+                {project.tags.map((tag, i) => {
+                    return <div className="tag" key={tag + i}></div>
                 })}
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   withNavigationContext,
   Link
@@ -12,16 +12,26 @@ import "./nav.scss";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
-  const color = slug === "" || slug === "page-contact" || slug === "page-cursus" ? 'white' : 'black';
   const [menuVisibility, setMenuVisibility] = useState(false);
-  const [{ y, z }, set] = useSpring(() => ({ y: 0, z: 0 }))
+  const [{ y, z, color }, set] = useSpring(() => ({ y: 0, z: 0, color: '#fff' }))
+
+  useEffect(() => {
+    if (fullpage.navigation.slug === 'page-projects') {
+      set({ color: '#000' })
+    } else {
+      set({ color: '#fff' })
+    }
+    return () => {
+
+    }
+  }, [fullpage])
 
   return (
     <>
       <header className="page-header">
         <div className="logo">
           <ReactLogo />
-          <p style={{ color: color }}>Workshop</p>
+          <animated.p style={{ color: color }} className="logo-titre">Workshop</animated.p>
         </div>
         <div className="menu" onClick={() => {
           setMenuVisibility(!menuVisibility);
@@ -35,7 +45,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
             onMouseLeave={() => { set({ y: 0, z: 0 }) }}
           >
             <animated.div className="menu-icon-line" style={{ background: color, transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(-${v}deg)`), bottom: y.interpolate(v => `${v}px`) }}></animated.div>
-            <div className="menu-icon-line" style={{ background: color }}></div>
+            <animated.div className="menu-icon-line" style={{ background: color }}></animated.div>
             <animated.div className="menu-icon-line" style={{ background: color, transform: z.interpolate([0, 25, 50, 100], [0, 30, 0, 0]).interpolate(v => `rotateZ(${v}deg)`), bottom: y.interpolate(v => `-${v}px`) }}></animated.div>
           </div>
         </div>

@@ -3,6 +3,10 @@ import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
 
+import Stackoverflow from '../../public/socialicons/stackoverflow.svg';
+import Linkedin from '../../public/socialicons/linkedin.svg';
+import Github from '../../public/socialicons/github.svg';
+
 import './contact.scss'
 
 export const ContactPage = withNavigationContext(({ fullpage }) => {
@@ -123,7 +127,9 @@ export const ContactPage = withNavigationContext(({ fullpage }) => {
                     "retina_detect": true
                 }} />
             <div className="contact-wrapper">
-                <p>Contact page</p>
+                <Github height={250} />
+                <Stackoverflow height={250} />
+                <Linkedin height={250} />
             </div>
         </Page>
     )

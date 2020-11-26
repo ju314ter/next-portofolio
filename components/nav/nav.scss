@@ -60,6 +60,7 @@
   height: 150px;
   width: 100vw;
   opacity: 1;
+  transition: all 0.3s ease-in-out;
 	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 
@@ -69,15 +70,21 @@
     justify-content: center;
     align-items: center;
 
-    p {
+    .logo-titre {
       font-size: 3em;
       margin-left: 15px;
       font-family: Open Sans;
       transition: all 0.3s linear;
       pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
 
       @media screen and (max-width: 768px) {
         display: none;
+      }
+
+      &.hide {
+        opacity: 0;
       }
     }
   }
