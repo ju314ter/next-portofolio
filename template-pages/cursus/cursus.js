@@ -1,16 +1,21 @@
 import React from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
-import Particles from 'react-particles-js';
+import Experience from "../../components/experience/experience";
 
 import './cursus.scss'
+
+import cursusData from '../../data/cursus.json'
+
 
 
 export const CursusPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page>
             <div className="cursus-wrapper">
-                <p>This is cursus page</p>
+                {Object.entries(cursusData.formations).map((experience, i) => {
+                    return <Experience experience={experience[1]} key={i} />
+                })}
             </div>
             <div className="clouds noselect">
                 <img src="/cloud1.png" alt="cloud" className="cloud noselect"></img>

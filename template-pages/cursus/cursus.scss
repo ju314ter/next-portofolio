@@ -36,9 +36,21 @@ body.visible .canvas-wrapper-cursus {
 
 .cursus-wrapper {
     width: 100%;
-    height: 100%;
+    position: relative;
+    top: 150px;
     display: flex;
-    justify-content: center;
+    flex: 0 0 80%;
+    flex-direction: column;
     align-items: center;
     z-index: 50;
+
+    & :nth-child(even) {
+        position: relative;
+        left: 75px;
+    }
+
+    & :nth-child(odd) {
+        position: relative;
+        left: -75px;
+    }
 }

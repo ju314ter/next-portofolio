@@ -78,7 +78,6 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                         }
                     }
                 }} />
-            <Background style={{ position: 'absolute' }} className="bg-home" />
             <div className="home-wrapper">
                 <div className="title">
                     <h1>Julien FEGER</h1>
