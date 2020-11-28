@@ -27,12 +27,22 @@
     }
 }
 
-.img-wrapper {
-    cursor: pointer;
+.simple-trans-main {
     flex: 1 0 60%;
-    width: 100%;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform, opacity;
 }
 
 

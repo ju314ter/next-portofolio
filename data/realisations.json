@@ -4,7 +4,9 @@
         {
             "projectName": "Portfolio v1",
             "repoPath": "",
-            "illustrationPath": "/projets/jfworkshop.png",
+            "illustrationPath": [
+                "/projets/jfworkshop.png"
+            ],
             "tags": [
                 "jQuery",
                 "vanilla"
@@ -14,7 +16,9 @@
         {
             "projectName": "Portfolio v2",
             "repoPath": "",
-            "illustrationPath": "/projets/portfoliov2.JPG",
+            "illustrationPath": [
+                "/projets/portfoliov2.JPG"
+            ],
             "tags": [
                 "react",
                 "react-awesome-slider",
@@ -25,7 +29,9 @@
         {
             "projectName": "Aile du Maine",
             "repoPath": "",
-            "illustrationPath": "/projets/ADM.jpg",
+            "illustrationPath": [
+                "/projets/ADM.jpg"
+            ],
             "tags": [
                 "react",
                 "GatsbyJS",
@@ -37,7 +43,10 @@
             "projectName": "Catalogue App",
             "portrait": true,
             "repoPath": "",
-            "illustrationPath": "/projets/patisserie2.PNG",
+            "illustrationPath": [
+                "/projets/patisserie2.PNG",
+                "/projets/patisserie1.PNG"
+            ],
             "tags": [
                 "react-native",
                 "headless CMS"
@@ -48,7 +57,12 @@
             "projectName": "TFT wiki",
             "repoPath": "",
             "portrait": true,
-            "illustrationPath": "/projets/tft1.jpg",
+            "illustrationPath": [
+                "/projets/tft1.jpg",
+                "/projets/tft2.jpg",
+                "/projets/tft3.jpg",
+                "/projets/tft4.jpg"
+            ],
             "tags": [
                 "react-native",
                 "expo"
@@ -58,7 +72,9 @@
         {
             "projectName": "Landing page builder",
             "repoPath": "",
-            "illustrationPath": "/projets/lpbuilder.png",
+            "illustrationPath": [
+                "/projets/lpbuilder.png"
+            ],
             "tags": [
                 "angular",
                 "NgRx",
@@ -69,7 +85,9 @@
         {
             "projectName": "Mockup travel agency",
             "repoPath": "",
-            "illustrationPath": "/projets/VPT.png",
+            "illustrationPath": [
+                "/projets/VPT.png"
+            ],
             "tags": [
                 "php",
                 "symfony",
@@ -80,7 +98,9 @@
         {
             "projectName": "Wordpress personnal website",
             "repoPath": "",
-            "illustrationPath": "/projets/helwu.PNG",
+            "illustrationPath": [
+                "/projets/helwu.PNG"
+            ],
             "tags": [
                 "wordpress",
                 "elementor"
@@ -90,7 +110,9 @@
         {
             "projectName": "MixR: eat and meet",
             "repoPath": "",
-            "illustrationPath": "/projets/mixr.png",
+            "illustrationPath": [
+                "/projets/mixr.png"
+            ],
             "tags": [
                 "wordpress",
                 "buddypress"
@@ -101,7 +123,14 @@
             "projectName": "Catch'up",
             "portrait": true,
             "repoPath": "",
-            "illustrationPath": "/projets/matcher.PNG",
+            "illustrationPath": [
+                "/projets/matcher.PNG",
+                "/projets/maquette.jpg",
+                "/projets/mobilerendu0.png",
+                "/projets/mobilerendu1.png",
+                "/projets/mobilerendu3.png",
+                "/projets/itsamatch.PNG"
+            ],
             "tags": [
                 "react-native",
                 "firebase",
@@ -113,7 +142,9 @@
         {
             "projectName": "DeliCat",
             "repoPath": "",
-            "illustrationPath": "/projets/delicat.png",
+            "illustrationPath": [
+                "/projets/delicat.png"
+            ],
             "tags": [
                 "wordpress",
                 "woocommerce"
@@ -123,7 +154,9 @@
         {
             "projectName": "Online manga reader",
             "repoPath": "",
-            "illustrationPath": "/projets/jfworkshop.png",
+            "illustrationPath": [
+                "/projets/jfworkshop.png"
+            ],
             "tags": [
                 "angular",
                 "scrapping"
