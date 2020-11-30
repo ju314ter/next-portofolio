@@ -43,14 +43,4 @@ body.visible .canvas-wrapper-cursus {
     flex-direction: column;
     align-items: center;
     z-index: 50;
-
-    & :nth-child(even) {
-        position: relative;
-        left: 75px;
-    }
-
-    & :nth-child(odd) {
-        position: relative;
-        left: -75px;
-    }
 }
