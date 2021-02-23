@@ -27,7 +27,7 @@
         -webkit-box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
         -moz-box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
         box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
-        border-radius: 30px;
+        border-radius: 25%;
         transform: scale(1.05)
     }
 
@@ -52,20 +52,39 @@
         -webkit-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.75);
         -moz-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.75);
         box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.75);
-        border-radius: 10%; 
+        border-radius: 100px; 
         transform: scale(1.05)
     }
 }
 
-.type-experience {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.header-card {
+    color: #295a85;
+    font-size: 1.25rem;
+}
+
+.description {
+    font-size: 1.15rem;
+}
+
+.type-experience-wrapper {
+    margin: 10px;
+    
+    .type-experience {
+        padding: 10px;
+        margin: 10px;
+        background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+        color: #333;
+        border-radius: 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-family: Encode Sans;
+    }
 }
 
 .sliding-panel {
     position: absolute;
-    background: #181717;
+    background-image: linear-gradient( 135deg, #d3e2ff 10%, #5151E5 100%);
     color: #fafafa;
     width: 100%;
     height: 100%;
@@ -73,4 +92,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    h3 {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .acquis-element {
+        font-size: 1.9rem;
+        font-weight: 300;
+    }
 }

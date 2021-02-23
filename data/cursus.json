@@ -12,7 +12,10 @@
                 "S.V.T: 14/20"
             ],
             "illustrationPath": "",
-            "typeExperience": "formation + diplome mention bien",
+            "typeExperience": [
+                "formation",
+                "diplome mention bien"
+            ],
             "description": "Lycée Bellevue, Le Mans"
         },
         {
@@ -25,7 +28,7 @@
                 "Découverte du monde de la recherche"
             ],
             "illustrationPath": "",
-            "typeExperience": "formation",
+            "typeExperience": [],
             "description": "Faculté de medecine d'Angers"
         },
         {
@@ -39,7 +42,10 @@
                 "Découverte du monde de la recherche"
             ],
             "illustrationPath": "",
-            "typeExperience": "formation + diplome",
+            "typeExperience": [
+                "formation",
+                "diplome"
+            ],
             "description": "Polytech Angers"
         },
         {
@@ -53,7 +59,9 @@
                 "Gestion financière"
             ],
             "illustrationPath": "",
-            "typeExperience": "formation",
+            "typeExperience": [
+                "formation"
+            ],
             "description": "Ecole supérieur d'ingénieur en électronique et électrotechnique Paris, Noisy-le-grand"
         },
         {
@@ -62,7 +70,9 @@
             "soustitre": "",
             "acquis": [],
             "illustrationPath": "",
-            "typeExperience": "service civique",
+            "typeExperience": [
+                "service civique"
+            ],
             "description": "Porteur de projet solidaire pour Unis'Cité dans le cadre de la lutte contre l'isolement social, Nantes"
         },
         {
@@ -74,8 +84,11 @@
                 "16 mois  d'Angular chez Hypecode, Vincennes"
             ],
             "illustrationPath": "",
-            "typeExperience": "alternance + diplome",
-            "description": "Ecole Aston (groupe SQLI), qualification de niveau 7, Arceuil Cachan"
+            "typeExperience": [
+                "alternance",
+                "diplome"
+            ],
+            "description": "Ecole Aston (groupe SQLI), titre professionnel de niveau 7, Arceuil Cachan"
         }
     ]
 }

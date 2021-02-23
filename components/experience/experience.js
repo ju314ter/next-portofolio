@@ -17,8 +17,10 @@ const Experience = (props) => {
             onClick={() => { toggle(!open) }}
             className={`experience-wrapper ${isEven ? 'even' : ''}`}
         >
-            <div className="type-experience">
-                <p>{experience.typeExperience}</p>
+            <div className="type-experience-wrapper">
+                {experience.typeExperience && experience.typeExperience.map((typeExperience) => {
+                    return <span className="type-experience">{typeExperience}</span>
+                })}
             </div>
             <div className="header-card">
                 <h2>{experience.intitule}</h2>
