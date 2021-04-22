@@ -1,15 +1,16 @@
 .fullscreen-menu-wrapper {
   position: absolute;
+  background: linear-gradient(135deg, #85c8cbb3 10%, #020a0cB3 100%);
   opacity: 1;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.3s ease-in;
 
   nav {
     display: flex;
@@ -17,17 +18,11 @@
   }
 
   a {
-    color: white;
+    color: lightgrey;
     font-size: 42px;
     margin: 10px;
     text-decoration: none;
     font-family: Encode Sans;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #2f2f2f;
-    padding: 10px;
-    border-radius: 3px;
   }
 
   a.slidein {
@@ -38,13 +33,14 @@
 
 
   a.selected {
-    color: #a2a2a2;
+    color: white;
   }
 }
 
 .fullscreen-menu-wrapper.hidden {
   opacity: 0;
   z-index: -10;
+  transition: opacity 0.3s ease-in;
 }
 
 .page-header {
@@ -157,4 +153,11 @@
             transform: translateX(0);
     opacity: 1;
   }
+}
+
+.whiteArrow::after,.whiteArrow::before {
+  background: white;
+}
+.blackArrow::after,.blackArrow::before {
+  background: black;
 }

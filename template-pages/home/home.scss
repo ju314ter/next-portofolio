@@ -46,6 +46,12 @@ body.visible .canvas-wrapper-home {
 }
 
 .tech-slider-wrapper {
+    @media screen and (max-width: 720px) {
+       transform: scale(0.5);
+    }
+}
+
+.tech-slider {
     position: relative;
     display: flex;
     justify-content: center;
@@ -57,10 +63,6 @@ body.visible .canvas-wrapper-home {
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50% -300px;
-
-    // &:hover {
-    //     animation-play-state: paused;
-    // }
     
     div {
         position: absolute;

@@ -2,7 +2,7 @@
     background: #d3e2ff;
 }
 
-.bg-front {
+.bg-front-cursus {
     position: fixed;
     bottom: -190px;
     z-index: 11;
@@ -14,10 +14,6 @@
     @media screen and (max-width:768px) {
         bottom: 0;
     }
-}
-
-.canvas-wrapper-projects {
-    z-index: 10;
 }
 
 .canvas-wrapper-cursus {

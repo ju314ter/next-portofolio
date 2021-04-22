@@ -16,10 +16,32 @@ const Nav = withNavigationContext(({ fullpage }) => {
   const [{ y, z, color }, set] = useSpring(() => ({ y: 0, z: 0, color: '#fff' }))
 
   useEffect(() => {
-    if (fullpage.navigation.slug === 'page-cursus') {
-      set({ color: '#000' })
-    } else {
-      set({ color: '#fff' })
+    switch (fullpage.navigation.slug) {
+      case '': 
+      set({ color: '#fff' });
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
+      break;
+      case 'page-projects': set({ color: '#fff' });
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
+      break;
+      case 'page-cursus': set({ color: '#000' });
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('whiteArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('whiteArrow')
+      break;
+      case 'page-contact': set({ color: '#fff' });
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
+      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
+      break;
     }
     return () => {
 
@@ -30,7 +52,7 @@ const Nav = withNavigationContext(({ fullpage }) => {
     <>
       <header className="page-header">
         <div className="logo">
-          <ReactLogo />
+          <Link href='/'><ReactLogo /></Link>
           <animated.p style={{ color: color }} className="logo-titre">Workshop</animated.p>
         </div>
         <div className="menu" onClick={() => {

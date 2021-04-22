@@ -6,7 +6,7 @@
             "intitule": "Baccalauréat type S",
             "soustitre": "Specialité Science de la Vie et de la Terre",
             "acquis": [
-                "Option chinois",
+                "Option mandarin",
                 "Math: 15/20",
                 "Physique-chimie : 17/20",
                 "S.V.T: 14/20"
@@ -67,8 +67,12 @@
         {
             "date": "2017/2018",
             "intitule": "Entrepreneur Social",
-            "soustitre": "",
-            "acquis": [],
+            "soustitre": "Porteur de projet chez Unis'cité",
+            "acquis": [
+                "Développement de projet auprès d'acteurs locaux",
+                "Sensibilisation aux problématiques sociales",
+                "Découverte de l'économie sociale et solidaire (E.S.S)"
+            ],
             "illustrationPath": "",
             "typeExperience": [
                 "service civique"

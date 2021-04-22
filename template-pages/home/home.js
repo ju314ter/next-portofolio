@@ -84,29 +84,31 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                     <h2>Fullstack JS junior developper</h2>
                 </div>
                 <div className="tech-slider-wrapper">
-                    <div className="angular-logo-wrapper">
-                        <Angular height={250} />
-                    </div>
-                    <div className="jira-logo-wrapper">
-                        <Jira height={250} />
-                    </div>
-                    <div className="git-logo-wrapper">
-                        <Git />
-                    </div>
-                    <div className="gitlab-logo-wrapper">
-                        <Gitlab />
-                    </div>
-                    <div className="node-logo-wrapper">
-                        <Node />
-                    </div>
-                    <div className="mongo-logo-wrapper">
-                        <Mongo height={250} />
-                    </div>
-                    <div className="react-logo-wrapper">
-                        <ReactLogo />
-                    </div>
-                    <div className="typescript-logo-wrapper">
-                        <Typescript />
+                    <div className="tech-slider">
+                        <div className="angular-logo-wrapper">
+                            <Angular height={250} />
+                        </div>
+                        <div className="jira-logo-wrapper">
+                            <Jira height={250} />
+                        </div>
+                        <div className="git-logo-wrapper">
+                            <Git />
+                        </div>
+                        <div className="gitlab-logo-wrapper">
+                            <Gitlab />
+                        </div>
+                        <div className="node-logo-wrapper">
+                            <Node />
+                        </div>
+                        <div className="mongo-logo-wrapper">
+                            <Mongo height={250} />
+                        </div>
+                        <div className="react-logo-wrapper">
+                            <ReactLogo />
+                        </div>
+                        <div className="typescript-logo-wrapper">
+                            <Typescript />
+                        </div>
                     </div>
                 </div>
             </div>

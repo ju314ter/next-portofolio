@@ -130,13 +130,13 @@ export const ContactPage = withNavigationContext(({ fullpage }) => {
                 <span style={{ fontSize: 25, fontFamily: 'Encode Sans', color: '#fafafa', margin: 25, textAlign: 'center' }}>Let's get to know each other !</span>
                 <div className="icons">
                     <div className="icon-wrapper">
-                        <Github />
+                        <a href="https://github.com/ju314ter"><Github /></a>
                     </div>
                     <div className="icon-wrapper">
-                        <Stackoverflow />
+                    <a href="https://stackoverflow.com/users/10574010/julien-feger"><Stackoverflow /></a>
                     </div>
                     <div className="icon-wrapper">
-                        <Linkedin />
+                    <a href="https://www.linkedin.com/in/julien-feger-12364685"><Linkedin /></a>
                     </div>
                 </div>
             </div>

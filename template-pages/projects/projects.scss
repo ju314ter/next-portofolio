@@ -1,5 +1,31 @@
 .projects-page .page {
     background: #0b1a3a;
+    z-index: 0;
+    min-height: 100vh;
+    padding: 150px 10% 0 10%;
+
+    .projects-wrapper {
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.bg-front-projects {
+    position: fixed;
+    z-index: 0;
+    bottom: -220px;
+
+    @media screen and (max-width:2260px) {
+        bottom: -150px;
+    }
+
+    @media screen and (max-width:768px) {
+        bottom: -50px;
+    }
 }
 
 .canvas-wrapper-projects {
@@ -9,21 +35,9 @@
     width: 100%;
     height: 100%;
     transition: all 0.3s ease-in-out;
-    opacity: 0;
+    z-index: 0;
 }
 
 body.visible .canvas-wrapper-projects {
     opacity: 1;
-}
-
-.projects-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: 150px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0% 10%;
-    perspective: 1200px;
-    z-index: 20;
 }

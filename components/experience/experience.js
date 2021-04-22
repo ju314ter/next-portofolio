@@ -34,10 +34,11 @@ const Experience = (props) => {
             </div>
 
             <animated.div style={springProp} className="sliding-panel">
-                <h3>Acquis :</h3>
-                {experience.acquis.map((acquis, i) => {
-                    return <div key={i} className="acquis-element">{acquis}</div>
-                })}
+                <ul>
+                    {experience.acquis.map((acquis, i) => {
+                        return <li key={i} className="acquis-element">{acquis}</li>
+                    })}
+                </ul>
             </animated.div>
         </div>
     );

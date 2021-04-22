@@ -31,11 +31,7 @@ const Project = (projectData) => {
     const [open, toggle] = useState(false)
     const [ref, bounds] = useMeasure()
     const props = useSpring({ top: open ? 0 : bounds.height })
-
-    useEffect(() => {
-
-    }, [])
-
+    
     return (
         <div className="project-container"
             onMouseEnter={() => { toggle(true) }}

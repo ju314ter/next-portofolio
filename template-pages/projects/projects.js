@@ -92,7 +92,7 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                         "detect_on": "canvas",
                         "events": {
                             "onhover": {
-                                "enable": true,
+                                "enable": false,
                                 "mode": "bubble"
                             },
                             "onclick": {
@@ -136,7 +136,7 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                     })}
                 </div>
             </Page>
-            <BackgroundFront className='bg-front' />
+            <BackgroundFront className='bg-front-projects' />
         </>
     )
 });
