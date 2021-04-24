@@ -18,8 +18,8 @@ const Experience = (props) => {
             className={`experience-wrapper ${isEven ? 'even' : ''}`}
         >
             <div className="type-experience-wrapper">
-                {experience.typeExperience && experience.typeExperience.map((typeExperience) => {
-                    return <span className="type-experience">{typeExperience}</span>
+                {experience.typeExperience && experience.typeExperience.map((typeExperience, index) => {
+                    return <span className="type-experience" key={index}>{typeExperience}</span>
                 })}
             </div>
             <div className="header-card">

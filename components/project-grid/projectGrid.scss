@@ -1,0 +1,12 @@
+.grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-item-wrapper {
+    position: absolute;
+    will-change: transform, width, height, opacity;
+    padding: 15px;
+    text-align: center;
+}

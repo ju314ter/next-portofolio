@@ -3,16 +3,21 @@ import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
 import Project from '../../components/project/project';
-
+import ProjectGrid from '../../components/project-grid/projectGrid'
 import BackgroundFront from '../../public/bg-front-cursus.svg';
 
 import './projects.scss'
 import projectsData from '../../data/realisations.json'
+import useMeasure from 'react-use-measure';
+
 
 export const ProjectsPage = withNavigationContext(({ fullpage }) => {
 
     const [projects, setProjects] = useState(projectsData.realisations)
+    const [ref, bounds] = useMeasure();
 
+    useEffect(()=>{
+    }, [])
     return (
         <>
             <Particles
@@ -129,11 +134,11 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                     },
                     "retina_detect": true
                 }} />
-            <Page>
-                <div className="projects-wrapper">
-                    {Object.entries(projects).map((project, i) => {
-                        return <Project project={project[1]} key={i} />
-                    })}
+            <Page className="projects-page">
+                <div ref={ref} style={{width: '100%', height: '100%'}}>
+                    <div className="projects-wrapper">
+                        <ProjectGrid containerBounds={bounds}/>
+                    </div>
                 </div>
             </Page>
             <BackgroundFront className='bg-front-projects' />
