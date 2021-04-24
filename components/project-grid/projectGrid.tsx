@@ -52,8 +52,8 @@ const ProjectGrid = (props) => {
                 <button onClick={()=>{set(shuffle)}}>Click me</button>
             </div>
             <div ref={ref} className="grid" style={{ height: Math.max(...heights) }}>
-                {transitions.map(({ item, key, props }) => {
-                let {height, width, x, y, opacity} = props
+                {transitions.map(({ item, key, props:object}) => {
+                let {x, y} = props
                     return (
                         <a.div
                             key={key}
