@@ -5,6 +5,8 @@
 }
 
 .animated-item-wrapper {
+    display:flex;
+    justify-content: center;
     position: absolute;
     will-change: transform, width, height, opacity;
     padding: 15px;
