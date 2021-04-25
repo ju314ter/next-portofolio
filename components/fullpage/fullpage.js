@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import "react-awesome-slider/dist/custom-animations/fall-animation.css";
@@ -41,23 +41,27 @@ export default withNavigationContext(({ fullpage }) => {
   const isFirstLoad = useRef(true);
   const animation = fullpage.navigation.animation || `foldOutAnimation`;
 
+  useState(()=>{
+    console.log(fullpage.navigation.slug)
+  },[])
+
   return (
     <Slider
       startupScreen={<Startup />}
       startupDelay={1000}
       mobileTouch={false}
       animation={animation}
-      className="awesome-slider"
+      className={`awesome-slider ${fullpage.navigation.slug}`}
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
-        if (isFirstLoad.current === true) {
+        if (isFirstLoad.current) {
           document.querySelector("body").classList.add("animated");
           document.querySelector("body").classList.add("visible");
         }
       }}
       onTransitionStart={() => {
-        // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
-        if (isFirstLoad.current === true) {
+        // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION START
+        if (isFirstLoad.current) {
           document.querySelector("body").classList.remove("animated");
           document.querySelector("body").classList.remove("visible");
         }

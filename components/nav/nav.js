@@ -17,30 +17,13 @@ const Nav = withNavigationContext(({ fullpage }) => {
 
   useEffect(() => {
     switch (fullpage.navigation.slug) {
-      case '': 
-      set({ color: '#fff' });
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
+      case '': set({ color: '#fff' });
       break;
       case 'page-projects': set({ color: '#fff' });
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
       break;
       case 'page-cursus': set({ color: '#000' });
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('whiteArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('whiteArrow')
       break;
       case 'page-contact': set({ color: '#fff' });
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-left')[0].classList.add('whiteArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.remove('blackArrow')
-      document.getElementsByClassName('awssld__controls__arrow-right')[0].classList.add('whiteArrow')
       break;
     }
     return () => {

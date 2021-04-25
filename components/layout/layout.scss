@@ -80,3 +80,32 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.awssld__controls__arrow-left::before,
+.awssld__controls__arrow-left::after,
+.awssld__controls__arrow-right::before,
+.awssld__controls__arrow-right::after {
+  background-color: white !important;
+}
+
+.page-projects .awssld__controls__arrow-left::before,
+.page-projects .awssld__controls__arrow-left::after,
+.page-projects .awssld__controls__arrow-right::before,
+.page-projects .awssld__controls__arrow-right::after {
+  background-color: white !important;
+}
+
+.page-cursus .awssld__controls__arrow-left::before,
+.page-cursus .awssld__controls__arrow-left::after,
+.page-cursus .awssld__controls__arrow-right::before,
+.page-cursus .awssld__controls__arrow-right::after {
+  background-color: black !important;
+}
+
+
+.page-contact .awssld__controls__arrow-left::before,
+.page-contact .awssld__controls__arrow-left::after,
+.page-contact .awssld__controls__arrow-right::before,
+.page-contact .awssld__controls__arrow-right::after {
+  background-color: white !important;
+}
