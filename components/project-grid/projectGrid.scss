@@ -22,15 +22,30 @@
     padding-top: 30px;
 
     .tag-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 12px;
         font-family: Encode Sans;
         margin: 10px;
         padding: 10px;
-        background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+        background-image: linear-gradient(135deg, #3B2667 10%, #BC78EC 100%);
         color: white;
         border-radius: 5px;
         font-weight: 700;
         cursor: pointer;
+        will-change: width;
+        transition: all 0.3s ease;
+
+        .tag-button-remove, .tag-button-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .tag-button-remove {
+            color: #0b1a3a;
+        }
     }
 }

@@ -1,14 +1,13 @@
 import React, { useEffect, useState, useMemo } from "react";
 import useMeasure from 'react-use-measure';
 import { animated as a, useTransition } from "react-spring";
-import AwesomeButton from "react-awesome-button";
-import "react-awesome-button/dist/styles.css";
 import data from '../../data/realisations.json';
 import "./projectGrid.scss";
 
 import shuffle from 'lodash.shuffle'
 
 import Project from '../project/project'
+import GridTag from './tag'
 
 
 const ProjectGrid = (properties) => {
@@ -17,13 +16,14 @@ const ProjectGrid = (properties) => {
     const [columns, setColumns] = useState(2)
     const [ref, { width }] = useMeasure()
     const [items, set] = useState(data.realisations)
-    
     let tagsArray = [];
     data.realisations.forEach((real)=>{
         real.tags && real.tags.forEach((tag)=>{
             tagsArray.push(tag)
         })
     })
+    tagsArray = tagsArray.filter((tag,i) => tagsArray.indexOf(tag) === i)
+    const [selectedTag, setSelectedTag] = useState('');
 
     const [heights, gridItems] = useMemo(() => {
         let heights = new Array(columns).fill(0) // Each column gets a height starting with zero
@@ -54,11 +54,18 @@ const ProjectGrid = (properties) => {
         setColumns(Math.floor(containerBounds.width / 420))
     }, [containerBounds, projectHeight])
 
+    const toggle = (tag: string) => {
+        selectedTag !== tag ? 
+            (set(data.realisations.filter(real=>real.tags.includes(tag))) , setSelectedTag(tag)) 
+            :
+            (set(data.realisations), setSelectedTag(''))
+    }
+
     return (
         <>
             <div className="tags-section">
-                {tagsArray && tagsArray.map((tag)=>{
-                    return <span className="tag-button">{tag}</span>
+                {tagsArray && tagsArray.map((tag, i)=>{
+                    return <GridTag key={i+tag} index={i} selected={tag === selectedTag} tag={tag} onTagClick={()=>(toggle(tag))} />
                 })}
             </div>
             <div ref={ref} className="grid" style={{ height: Math.max(...heights) }}>
