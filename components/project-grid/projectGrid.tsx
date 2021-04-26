@@ -16,7 +16,7 @@ const ProjectGrid = (properties) => {
     const [columns, setColumns] = useState(2)
     const [ref, { width }] = useMeasure()
     const [items, set] = useState(data.realisations)
-    let tagsArray = [];
+    let tagsArray = ["Randomize"];
     data.realisations.forEach((real)=>{
         real.tags && real.tags.forEach((tag)=>{
             tagsArray.push(tag)
@@ -55,10 +55,18 @@ const ProjectGrid = (properties) => {
     }, [containerBounds, projectHeight])
 
     const toggle = (tag: string) => {
-        selectedTag !== tag ? 
-            (set(data.realisations.filter(real=>real.tags.includes(tag))) , setSelectedTag(tag)) 
-            :
-            (set(data.realisations), setSelectedTag(''))
+        switch(tag) {
+            case 'Randomize':
+                set(shuffle(data.realisations))
+                setSelectedTag('')
+                break;
+            default :
+                selectedTag !== tag ? 
+                    (set(data.realisations.filter(real=>real.tags.includes(tag))) , setSelectedTag(tag)) 
+                    :
+                    (set(data.realisations), setSelectedTag(''))
+                break;
+        }
     }
 
     return (

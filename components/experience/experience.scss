@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 0 370px;
+    flex: 1 0 300px;
     max-width: 40vw;
     min-width: 420px;
     background: #fafafaaa;
@@ -27,7 +27,7 @@
         -webkit-box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
         -moz-box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
         box-shadow: -10px 10px 23px -15px rgba(0,0,0,0.75);
-        border-radius: 25%;
+        border-radius: 30px;
         transform: scale(1.05)
     }
 
@@ -59,11 +59,11 @@
 
 .header-card {
     color: #295a85;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
 }
 
 .description {
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
 .type-experience-wrapper {
