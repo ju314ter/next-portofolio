@@ -42,7 +42,6 @@ export default withNavigationContext(({ fullpage }) => {
   const animation = fullpage.navigation.animation || `foldOutAnimation`;
 
   useState(()=>{
-    console.log(fullpage.navigation.slug)
   },[])
 
   return (

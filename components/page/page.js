@@ -1,17 +1,15 @@
 import React, { useEffect, useRef } from 'react';
+import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import './page.css';
+import { useRouter } from 'next/router'
 
-const Page = ({ style, children }) => {
+const Page = withNavigationContext(({ style, children, fullpage }) => {
 
   const pageRef = useRef(null)
   let logoTitle = {};
 
   const scrollListener = () => {
-    if (pageRef.current.scrollTop <= 15) {
-      logoTitle[0].classList.remove("hide");
-    } else (
-      logoTitle[0].classList.add("hide")
-    )
+    pageRef.current.scrollTop <= 15 ? logoTitle[0].classList.remove("hide") : logoTitle[0].classList.add("hide")
   }
 
   useEffect(() => {
@@ -24,6 +22,6 @@ const Page = ({ style, children }) => {
   }, [])
 
   return <div className="page" ref={pageRef} style={style}>{children}</div>;
-};
+});
 
 export default Page;

@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useMemo } from "react";
 import useMeasure from 'react-use-measure';
 import { animated as a, useTransition } from "react-spring";
-import useMedia from '../../custom-hooks/useMedia'
-import "./projectGrid.scss";
+import AwesomeButton from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import data from '../../data/realisations.json';
+import "./projectGrid.scss";
 
 import shuffle from 'lodash.shuffle'
 
@@ -13,18 +14,24 @@ import Project from '../project/project'
 const ProjectGrid = (properties) => {
     const { containerBounds } = properties
     const [projectHeight, setProjectHeight] = useState(containerBounds.height / 2);
-
-    const columns = useMedia(['(min-width: 1800px)', '(min-width: 1000px)', '(min-width: 600px)'], [3, 2, 1], 2)
+    const [columns, setColumns] = useState(2)
     const [ref, { width }] = useMeasure()
     const [items, set] = useState(data.realisations)
+    
+    let tagsArray = [];
+    data.realisations.forEach((real)=>{
+        real.tags && real.tags.forEach((tag)=>{
+            tagsArray.push(tag)
+        })
+    })
 
     const [heights, gridItems] = useMemo(() => {
         let heights = new Array(columns).fill(0) // Each column gets a height starting with zero
         let gridItems = items.map((child, i) => {
             const column = heights.indexOf(Math.min(...heights)) // Basic masonry-grid placing, puts tile into the smallest column using Math.min
             const left = (width / columns) * column // x = container width / number of columns * column index,
-            const top = (heights[column] += projectHeight + 50) - projectHeight + 50 // y = it's just the height of the current column
-            return { ...child, left, top, width: width / columns, height: projectHeight + 50 }
+            const top = (heights[column] += projectHeight + 25) - projectHeight + 25 // y = it's just the height of the current column
+            return { ...child, left, top, width: width / columns, height: projectHeight + 25 }
         })
         return [heights, gridItems]
     }, [columns, items, width, projectHeight])
@@ -44,12 +51,15 @@ const ProjectGrid = (properties) => {
 
     useEffect(() => {
         setProjectHeight(containerBounds.height / 2)
+        setColumns(Math.floor(containerBounds.width / 420))
     }, [containerBounds, projectHeight])
 
     return (
         <>
-            <div>
-                <button onClick={() => { set(shuffle) }}>Click me</button>
+            <div className="tags-section">
+                {tagsArray && tagsArray.map((tag)=>{
+                    return <span className="tag-button">{tag}</span>
+                })}
             </div>
             <div ref={ref} className="grid" style={{ height: Math.max(...heights) }}>
                 {transitions.map(({ item, key, props }) => {

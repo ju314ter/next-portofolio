@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef} from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
