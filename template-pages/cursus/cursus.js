@@ -4,14 +4,11 @@ import Page from "../../components/page/page";
 import Experience from "../../components/experience/experience";
 
 import './cursus.scss'
-
 import cursusData from '../../data/cursus.json'
-
-
 
 export const CursusPage = withNavigationContext(({ fullpage }) => {
     return (
-        <>
+        <div>
             <Page>
                 <div className="cursus-wrapper">
                     {Object.entries(cursusData.formations).reverse().map((experience, i) => {
@@ -26,6 +23,6 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
                 <img src="/cloud4.png" alt="cloud" className="cloud noselect"></img>
                 <img src="/cloud5.png" alt="cloud" className="cloud noselect"></img>
             </div>
-        </>
+        </div>
     )
 });

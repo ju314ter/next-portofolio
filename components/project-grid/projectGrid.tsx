@@ -54,10 +54,6 @@ const ProjectGrid = (properties) => {
         setColumns(Math.floor(containerBounds.width / 420))
     }, [containerBounds, projectHeight])
 
-    // useEffect(()=>{
-    //     console.log(items)
-    // }, [items])
-
     const toggle = (tag: string) => {
         switch(tag) {
             case 'Randomize':
@@ -96,10 +92,10 @@ const ProjectGrid = (properties) => {
                 })}
             </div>
             <div ref={ref} className="grid" style={{ height: Math.max(...heights) }}>
-                {transitions.map(({ item, key, props }) => {
+                {transitions.map(({ item, key, props },i) => {
                     return (
                         <a.div
-                            key={key}
+                            key={key + '-' + i}
                             className="animated-item-wrapper"
                             style={{ ...props }}
                         >
