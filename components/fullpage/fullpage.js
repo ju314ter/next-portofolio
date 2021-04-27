@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/custom-animations/cube-animation.css";
-import "react-awesome-slider/dist/custom-animations/fall-animation.css";
-import "react-awesome-slider/dist/custom-animations/fold-out-animation.css";
-import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
-import "react-awesome-slider/dist/custom-animations/open-animation.css";
+import AwesomeSlider from "../AwesomeSlider/src";
+import "../AwesomeSlider/dist/custom-animations/cube-animation.css";
+import "../AwesomeSlider/dist/custom-animations/fall-animation.css";
+import "../AwesomeSlider/dist/custom-animations/fold-out-animation.css";
+import "../AwesomeSlider/dist/custom-animations/scale-out-animation.css";
+import "../AwesomeSlider/dist/custom-animations/open-animation.css";
 import {
   withNavigationHandlers,
   withNavigationContext
