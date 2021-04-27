@@ -26,12 +26,17 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/page-cursus": [
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/page-contact": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
-      "static/chunks/pages/page-cursus.js"
+      "static/chunks/pages/page-contact.js"
     ],
     "/page-projects": [
       "static/chunks/main.js",

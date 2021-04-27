@@ -1,4 +1,5 @@
 import React, { useEffect, useRef} from "react";
+import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
@@ -20,6 +21,12 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
 
     return (
         <Page>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="description" content="Welcome to my workshop"/>
+                <title>Julien F&#233;ger Workshop - Home</title>
+                <meta name="robots" content="index,follow" />
+            </Head>
             <Particles
                 className="canvas-wrapper-home"
                 width="100%"
@@ -80,7 +87,7 @@ export const HomePage = withNavigationContext(({ fullpage }) => {
                 }} />
             <div className="home-wrapper">
                 <div className="title">
-                    <h1>Julien FEGER</h1>
+                    <h1>Julien F&#233;ger</h1>
                     <h2>Fullstack JS junior developper</h2>
                 </div>
                 <div className="tech-slider-wrapper">

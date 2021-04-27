@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
@@ -12,6 +13,12 @@ import './contact.scss'
 export const ContactPage = withNavigationContext(({ fullpage }) => {
     return (
         <Page className="contact-page">
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="description" content="Let's get in touch"/>
+                <title>Julien F&#233;ger Workshop - Contact</title>
+                <meta name="robots" content="index,follow" />
+            </Head>
             <Particles
                 className="canvas-wrapper-cursus"
                 width="100%"

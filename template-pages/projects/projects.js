@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
@@ -20,6 +21,12 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
     }, [])
     return (
         <>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="description" content="Explore my projects"/>
+                <title>Julien F&#233;ger Workshop - Projects</title>
+                <meta name="robots" content="index,follow" />
+            </Head>
             <Particles
                 className="canvas-wrapper-projects"
                 width="100%"

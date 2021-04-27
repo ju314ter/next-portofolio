@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Page from "../../components/page/page";
 import Experience from "../../components/experience/experience";
@@ -15,6 +16,12 @@ export const CursusPage = withNavigationContext(({ fullpage }) => {
 
     return (
         <a.div style={{background: 'rgb(79, 129, 232)'}}>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="description" content="How did I get there ?"/>
+                <title>Julien F&#233;ger Workshop - Cursus</title>
+                <meta name="robots" content="index,follow" />
+            </Head>
             <Page getHeight={handleHeight}>
                 <div className="cursus-wrapper">
                     {Object.entries(cursusData.formations).reverse().map((experience, i) => {
