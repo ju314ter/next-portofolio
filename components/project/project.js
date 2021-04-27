@@ -7,13 +7,15 @@ import { useSpring, useTransition, animated } from "react-spring";
 const Project = (projectData) => {
 
     const { project } = projectData
+    if (!project) { return null; }
 
     const getIllustrationsNodes = () => {
 
         let pagesArray = [];
-
-        for (var i = 0, len = project.illustrationPath.length; i < len; i++) {
-            pagesArray.push(project.illustrationPath[i].toString())
+        if(project.illustrationPath) {
+            for (var i = 0, len = project.illustrationPath.length; i < len; i++) {
+                pagesArray.push(project.illustrationPath[i].toString())
+            }
         }
         return pagesArray
 
@@ -32,26 +34,29 @@ const Project = (projectData) => {
     const [ref, bounds] = useMeasure()
     const props = useSpring({ top: open ? 0 : bounds.height })
     
-    return (
-        <div className="project-container"
-            onMouseEnter={() => { toggle(true) }}
-            onMouseLeave={() => { toggle(false) }}>
-            <div className="simple-trans-main" onClick={onClick}>
-                {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
-                    return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
-                }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}
+
+    if(project.tags && project.description && project.projectName) {
+        return (
+            <div className="project-container"
+                onMouseEnter={() => { toggle(true) }}
+                onMouseLeave={() => { toggle(false) }}>
+                <div className="simple-trans-main" onClick={onClick}>
+                    {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
+                        return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
+                    }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}
+                </div>
+                <div className="desc-wrapper" ref={ref}>
+                    <h2 className="titre">{project.projectName}</h2>
+                    <span className="description">{project.description}</span>
+                    <animated.div className="tags-wrapper" style={{ top: props.top }}>
+                        {project.tags.map((tag, i) => {
+                            return <animated.div className="tag" key={tag + i} style={{ opacity: props.top.interpolate([bounds.height, 0], [0, 1]) }}>{tag}</animated.div>
+                        })}
+                    </animated.div>
+                </div>
             </div>
-            <div className="desc-wrapper" ref={ref}>
-                <h2 className="titre">{project.projectName}</h2>
-                <span className="description">{project.description}</span>
-                <animated.div className="tags-wrapper" style={{ top: props.top }}>
-                    {project.tags.map((tag, i) => {
-                        return <animated.div className="tag" key={tag + i} style={{ opacity: props.top.interpolate([bounds.height, 0], [0, 1]) }}>{tag}</animated.div>
-                    })}
-                </animated.div>
-            </div>
-        </div>
-    );
+        );
+    } else { return null}
 };
 
 export default Project;

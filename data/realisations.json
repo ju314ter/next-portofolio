@@ -93,7 +93,7 @@
                 "symfony",
                 "mysql"
             ],
-            "description": ""
+            "description": "Projet réalisé durant une formation d'initiation a Symfony"
         },
         {
             "projectName": "Wordpress personnal website",
