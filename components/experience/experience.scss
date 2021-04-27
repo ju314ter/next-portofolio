@@ -72,8 +72,8 @@
     .type-experience {
         padding: 10px;
         margin: 10px;
-        background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
-        color: #333;
+        background-image: linear-gradient(135deg, #C60 10%, #C93 100%);
+        color: white;
         border-radius: 5px;
         font-weight: 700;
         text-transform: uppercase;
@@ -99,7 +99,8 @@
     }
 
     .acquis-element {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
+        padding: 5px;
         font-weight: 300;
     }
 }
