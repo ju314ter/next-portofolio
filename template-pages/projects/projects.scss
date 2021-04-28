@@ -42,3 +42,60 @@
 body.visible .canvas-wrapper-projects {
     opacity: 1;
 }
+
+.detail-page-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 50;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    padding: 1em 10% 0 10%;
+
+    .clickable {
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .chevron-bottom-wrapper {
+            width: 48px;
+            position: relative;
+            height: 100%;
+            &:hover {
+                .chevron-left {
+                    background: white;
+                    transform: rotate(210deg);
+                }
+                .chevron-right {
+                    background: white;
+                    transform: rotate(-30deg);
+                }
+            }
+        }
+        
+        .chevron-left,.chevron-right {
+            position: absolute;
+            height: 4px;
+            width: 42px;
+            left: 21px;
+            bottom: 25%;
+            transform-origin: 0 100% 0;
+            background: #818286;
+            transition: all 0.150s ease-in-out;
+        }
+        .chevron-left {
+            bottom: calc(25% + 3px);
+            left: 22px;
+            transform: rotate(225deg);
+        }
+        .chevron-right {
+            transform: rotate(-45deg);
+        }
+    }
+
+
+}

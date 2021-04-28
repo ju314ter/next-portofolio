@@ -12,19 +12,19 @@ export const media = [
     children: <HomePage />
   },
   {
-    slug: "page-projects",
+    slug: "projects",
     className: "slide projects-page",
     children: <ProjectsPage />
 
   },
   {
-    slug: "page-cursus",
+    slug: "cursus",
     className: "slide cursus-page",
     children: <CursusPage />
   }
   ,
   {
-    slug: "page-contact",
+    slug: "contact",
     className: "slide contact-page",
     children: <ContactPage />
   }

@@ -46,6 +46,7 @@
 .page-header {
   display: flex;
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   z-index: 10;
@@ -65,6 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: visible;
 
     .logo-titre {
       font-size: 3em;
@@ -89,6 +91,7 @@
     margin-right: 50px;
     z-index: 1500;
     cursor: pointer;
+    pointer-events: visible;
 
     .menu-icon-line {
       bottom: 0;

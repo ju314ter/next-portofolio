@@ -4,9 +4,8 @@ import useMeasure from 'react-use-measure';
 import { useSpring, useTransition, animated } from "react-spring";
 
 
-const Project = (projectData) => {
+const Project = ({ project, onClick }) => {
 
-    const { project } = projectData
     if (!project) { return null; }
 
     const getIllustrationsNodes = () => {
@@ -23,7 +22,7 @@ const Project = (projectData) => {
     const [illustrationsNodes, setIllustrationsNodes] = useState(getIllustrationsNodes())
 
     const [index, set] = useState(0)
-    const onClick = useCallback(() => set(state => (state + 1) % illustrationsNodes.length), [])
+    const onImageClick = useCallback(() => set(state => (state + 1) % illustrationsNodes.length), [])
     const transitions = useTransition(index, p => p, {
         from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
         enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
@@ -38,9 +37,10 @@ const Project = (projectData) => {
     if(project.tags && project.description && project.projectName) {
         return (
             <div className="project-container"
+                onClick={()=>(onClick(project))}
                 onMouseEnter={() => { toggle(true) }}
                 onMouseLeave={() => { toggle(false) }}>
-                <div className="simple-trans-main" onClick={onClick}>
+                <div className="simple-trans-main" onClick={onImageClick}>
                     {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
                         return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
                     }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}

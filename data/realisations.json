@@ -3,6 +3,7 @@
     "realisations": [
         {
             "projectName": "Portfolio v1",
+            "projectSlug": "portfolio-v-1",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/jfworkshop.png"
@@ -15,6 +16,7 @@
         },
         {
             "projectName": "Portfolio v2",
+            "projectSlug": "portfolio-v-2",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/portfoliov2.JPG"
@@ -28,6 +30,7 @@
         },
         {
             "projectName": "Aile du Maine",
+            "projectSlug": "aile-du-maine",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/ADM.jpg"
@@ -41,6 +44,7 @@
         },
         {
             "projectName": "Catalogue App",
+            "projectSlug": "catalogue-app",
             "portrait": true,
             "repoPath": "",
             "illustrationPath": [
@@ -55,6 +59,7 @@
         },
         {
             "projectName": "TFT wiki",
+            "projectSlug": "tft-wiki-app",
             "repoPath": "",
             "portrait": true,
             "illustrationPath": [
@@ -70,7 +75,8 @@
             "description": "Wiki application about the riot game Teamfight Tactics"
         },
         {
-            "projectName": "Landing page builder",
+            "projectName": "Landingpage builder",
+            "projectSlug": "landingpage-builder",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/lpbuilder.png"
@@ -84,6 +90,7 @@
         },
         {
             "projectName": "Mockup travel agency",
+            "projectSlug": "travel-agency-mockup",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/VPT.png"
@@ -96,7 +103,8 @@
             "description": "Projet réalisé durant une formation d'initiation a Symfony"
         },
         {
-            "projectName": "Wordpress personnal website",
+            "projectName": "Wordpress personnal online curriculum",
+            "projectSlug": "wordpress-curriculum-helwu",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/helwu.PNG"
@@ -109,6 +117,7 @@
         },
         {
             "projectName": "MixR: eat and meet",
+            "projectSlug": "mixr-social-platform",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/mixr.png"
@@ -121,6 +130,7 @@
         },
         {
             "projectName": "Catch'up",
+            "projectSlug": "catchup-app",
             "portrait": true,
             "repoPath": "",
             "illustrationPath": [
@@ -141,6 +151,7 @@
         },
         {
             "projectName": "DeliCat",
+            "projectSlug": "delicat-bakery-wordpress",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/delicat.png"
@@ -152,7 +163,8 @@
             "description": "Wordpress online shop for a gluten and lactose free bakery project"
         },
         {
-            "projectName": "Online manga reader",
+            "projectName": "Clientside manga reader/scrapper",
+            "projectSlug": "clientside-manga-scrapper",
             "repoPath": "",
             "illustrationPath": [
                 "/projets/jfworkshop.png"

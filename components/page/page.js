@@ -10,7 +10,6 @@ const Page = withNavigationContext(({ style, children, fullpage , getHeight = nu
 
   const scrollListener = () => {
     pageRef.current.scrollTop <= 15 ? logoTitle[0].classList.remove("hide") : logoTitle[0].classList.add("hide")
-    console.log(pageRef.current.scrollTop)
   }
 
   useEffect(() => {

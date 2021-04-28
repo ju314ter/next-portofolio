@@ -84,6 +84,10 @@ const ProjectGrid = (properties) => {
         }
     }
 
+    const handleProject = (project) => {
+        properties.selectedProject(project)
+    }
+
     return (
         <>
             <div className="tags-section">
@@ -99,7 +103,7 @@ const ProjectGrid = (properties) => {
                             className="animated-item-wrapper"
                             style={{ ...props }}
                         >
-                            <Project project={item} />
+                            <Project onClick={handleProject} project={item} />
                         </a.div>
                     )
                 })}

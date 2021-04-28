@@ -19,11 +19,11 @@ const Nav = withNavigationContext(({ fullpage }) => {
     switch (fullpage.navigation.slug) {
       case '': set({ color: '#fff' });
       break;
-      case 'page-projects': set({ color: '#fff' });
+      case 'projects': set({ color: '#fff' });
       break;
-      case 'page-cursus': set({ color: '#000' });
+      case 'cursus': set({ color: '#000' });
       break;
-      case 'page-contact': set({ color: '#fff' });
+      case 'contact': set({ color: '#fff' });
       break;
     }
     return () => {
@@ -66,19 +66,19 @@ const Nav = withNavigationContext(({ fullpage }) => {
             Home
           </Link>
           <Link
-            className={slug === "page-projects" ? "selected" : null}
+            className={slug === "projects" ? "selected" : null}
             href="/page-projects"
           >
             Projects
           </Link>
           <Link
-            className={slug === "page-cursus" ? "selected" : null}
+            className={slug === "cursus" ? "selected" : null}
             href="/page-cursus"
           >
             Cursus
           </Link>
           <Link
-            className={slug === "page-contact" ? "selected" : null}
+            className={slug === "contact" ? "selected" : null}
             href="/page-contact"
           >
             Contact

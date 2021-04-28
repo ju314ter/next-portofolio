@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
     <Provider slug={router.route}>
       <Head>
         <title>
-          JFWorkshop
+          Julien Féger Workshop
         </title>
         <meta
           name="viewport"

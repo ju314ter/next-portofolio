@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
+import { useRouter } from "next/router";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
-import Project from '../../components/project/project';
 import ProjectGrid from '../../components/project-grid/projectGrid'
-import BackgroundFront from '../../public/bg-front-cursus.svg';
+import BackgroundFront, { indexOf } from '../../public/bg-front-cursus.svg';
 
 import './projects.scss'
 import projectsData from '../../data/realisations.json'
 import useMeasure from 'react-use-measure';
+import { animated, useSpring } from "react-spring";
 
 
 export const ProjectsPage = withNavigationContext(({ fullpage }) => {
@@ -17,8 +18,33 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
     const [projects, setProjects] = useState(projectsData.realisations)
     const [ref, bounds] = useMeasure();
 
-    useEffect(()=>{
-    }, [])
+    const router = useRouter()
+
+    // useEffect(() => {
+    //   // Always do navigations after the first render
+    //   router.push('projects/?projectId=10', undefined, { shallow: true })
+    // }, [])
+
+    const [selectedProject, setSelectedProject] = useState({})
+
+    const displaySelectedProject = async (project) => {
+        await router.push(`projects?projectId=${project.projectSlug}`, undefined, { shallow: true })
+        await setDetailPageAnim({opacity:1,bottom:'0'})
+    }
+    const closeProjectDetail = async () => {
+        await router.push('projects', undefined, { shallow: true })
+        await setDetailPageAnim({opacity:0,bottom:'-100vh'})
+    }
+  
+    useEffect(() => {
+      const { projectId } = router.query 
+      projectId ? (setSelectedProject(...projects.filter((el)=>(el.projectSlug === projectId)))
+                  ,setDetailPageAnim({opacity:1,bottom:'0'}))
+                  :setSelectedProject({})
+    }, [router.query.projectId])
+
+    const [styleDetailPage, setDetailPageAnim] = useSpring(()=>({opacity: 0, bottom :'-100vh' }))
+
     return (
         <>
             <Head>
@@ -143,9 +169,24 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                 }} />
             <Page className="projects-page">
                 <div ref={ref} style={{width: '100%', height: '100%'}}>
-                    <div className="projects-wrapper">
-                        <ProjectGrid containerBounds={bounds}/>
+
+                <animated.div style={styleDetailPage} className={`detail-page-wrapper ${selectedProject.projectSlug}`} onClick={closeProjectDetail}>
+                    <div className="clickable">
+                        <div className="chevron-bottom-wrapper">
+                            <div className="chevron-left"></div>
+                            <div className="chevron-right"></div>
+                        </div>
                     </div>
+                    <div className="detail-page-content">
+
+                    </div>
+                </animated.div>
+                {
+                    selectedProject &&
+                    (<div className="projects-wrapper">
+                        <ProjectGrid containerBounds={bounds} selectedProject={displaySelectedProject}/>
+                    </div>)
+                }
                 </div>
             </Page>
             <BackgroundFront className='bg-front-projects' />
