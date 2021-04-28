@@ -46,14 +46,40 @@ body.visible .canvas-wrapper-projects {
 .detail-page-wrapper {
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     z-index: 50;
     height: 100vh;
     width: 100vw;
-    background: black;
+    background: rgba(0,0,0,0.7);
     padding: 1em 10% 0 10%;
 
+    .detail-page-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-detail-project{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .img-wrapper-detail-project {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        will-change: transform, opacity;
+    }
+    
     .clickable {
         width: 100%;
         height: 13vh;

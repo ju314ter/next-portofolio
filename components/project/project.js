@@ -40,7 +40,7 @@ const Project = ({ project, onClick }) => {
                 onClick={()=>(onClick(project))}
                 onMouseEnter={() => { toggle(true) }}
                 onMouseLeave={() => { toggle(false) }}>
-                <div className="simple-trans-main" onClick={onImageClick}>
+                <div className="simple-trans-main">
                     {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
                         return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
                     }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}

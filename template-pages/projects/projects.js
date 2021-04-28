@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Page from "../../components/page/page";
 import Particles from 'react-particles-js';
 import ProjectGrid from '../../components/project-grid/projectGrid'
+import ProjectDetailPage from './project-detail'
 import BackgroundFront, { indexOf } from '../../public/bg-front-cursus.svg';
 
 import './projects.scss'
@@ -25,25 +26,29 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
     //   router.push('projects/?projectId=10', undefined, { shallow: true })
     // }, [])
 
-    const [selectedProject, setSelectedProject] = useState({})
+    const [selectedProject, setSelectedProject] = useState(null)
 
     const displaySelectedProject = async (project) => {
         await router.push(`projects?projectId=${project.projectSlug}`, undefined, { shallow: true })
         await setDetailPageAnim({opacity:1,bottom:'0'})
+        await setProjectGridAnim({opacity:0})
     }
     const closeProjectDetail = async () => {
         await router.push('projects', undefined, { shallow: true })
         await setDetailPageAnim({opacity:0,bottom:'-100vh'})
+        await setProjectGridAnim({opacity:1})
     }
   
     useEffect(() => {
       const { projectId } = router.query 
       projectId ? (setSelectedProject(...projects.filter((el)=>(el.projectSlug === projectId)))
-                  ,setDetailPageAnim({opacity:1,bottom:'0'}))
-                  :setSelectedProject({})
+                  ,setDetailPageAnim({opacity:1,bottom:'0'})
+                  ,setProjectGridAnim({opacity:0}))
+                  :setSelectedProject(null)
     }, [router.query.projectId])
 
     const [styleDetailPage, setDetailPageAnim] = useSpring(()=>({opacity: 0, bottom :'-100vh' }))
+    const [styleProjectGrid, setProjectGridAnim] = useSpring(()=>({opacity: 1}))
 
     return (
         <>
@@ -169,24 +174,16 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                 }} />
             <Page className="projects-page">
                 <div ref={ref} style={{width: '100%', height: '100%'}}>
-
-                <animated.div style={styleDetailPage} className={`detail-page-wrapper ${selectedProject.projectSlug}`} onClick={closeProjectDetail}>
-                    <div className="clickable">
-                        <div className="chevron-bottom-wrapper">
-                            <div className="chevron-left"></div>
-                            <div className="chevron-right"></div>
-                        </div>
-                    </div>
-                    <div className="detail-page-content">
-
-                    </div>
-                </animated.div>
-                {
-                    selectedProject &&
-                    (<div className="projects-wrapper">
+                    {
+                        selectedProject && (
+                            <animated.div style={styleDetailPage} className={`detail-page-wrapper ${selectedProject.projectSlug}`} onClick={closeProjectDetail}>
+                                <ProjectDetailPage project={selectedProject}/>
+                            </animated.div>
+                        )
+                    }
+                    <animated.div style={styleProjectGrid} className="projects-wrapper">
                         <ProjectGrid containerBounds={bounds} selectedProject={displaySelectedProject}/>
-                    </div>)
-                }
+                    </animated.div>
                 </div>
             </Page>
             <BackgroundFront className='bg-front-projects' />
