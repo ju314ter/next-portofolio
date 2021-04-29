@@ -5,40 +5,57 @@
             "projectName": "Portfolio v1",
             "projectSlug": "portfolio-v-1",
             "repoPath": "",
+            "directUrl": "https://ju314ter.github.io/Curriculum-JF-V1/",
             "illustrationPath": [
-                "/projets/jfworkshop.png"
+                "/projets/JFW.JPG",
+                "/projets/JFW1.JPG",
+                "/projets/JFW2.JPG",
+                "/projets/JFW3.JPG",
+                "/projets/JFW4.JPG"
             ],
             "tags": [
                 "jQuery",
                 "vanilla"
             ],
-            "description": "First version of my portfolio as an intern."
+            "description": "First online curriculum as an intern"
         },
         {
             "projectName": "Portfolio v2",
             "projectSlug": "portfolio-v-2",
-            "repoPath": "",
+            "repoPath": "https://github.com/ju314ter/next-portofolio",
             "illustrationPath": [
-                "/projets/portfoliov2.JPG"
+                "/projets/JFWP.JPG",
+                "/projets/JFWP1.JPG",
+                "/projets/JFWP2.JPG",
+                "/projets/JFWP3.JPG",
+                "/projets/JFWP4.JPG"
             ],
             "tags": [
                 "react",
                 "react-awesome-slider",
-                "react-spring"
+                "react-spring",
+                "typescript"
             ],
             "description": "Second version of my portfolio as a junior web developper."
         },
         {
             "projectName": "Aile du Maine",
             "projectSlug": "aile-du-maine",
-            "repoPath": "",
+            "repoPath": "https://github.com/LADMP/ADM",
+            "directUrl": "https://suspicious-swirles-87e9f9.netlify.app",
             "illustrationPath": [
-                "/projets/ADM.jpg"
+                "/projets/ADM1.JPG",
+                "/projets/ADM2.JPG",
+                "/projets/ADM3.JPG",
+                "/projets/ADM4.JPG"
             ],
             "tags": [
                 "react",
                 "GatsbyJS",
-                "Netlify"
+                "Netlify",
+                "react-spring",
+                "graphQL",
+                "facebook api"
             ],
             "description": "Online website for Le Mans Glider association \"Les Ailes du Maine\""
         },
@@ -91,7 +108,7 @@
         {
             "projectName": "Mockup travel agency",
             "projectSlug": "travel-agency-mockup",
-            "repoPath": "",
+            "repoPath": "https://github.com/ju314ter/VoyagePourTous",
             "illustrationPath": [
                 "/projets/VPT.png"
             ],
@@ -132,7 +149,7 @@
             "projectName": "Catch'up",
             "projectSlug": "catchup-app",
             "portrait": true,
-            "repoPath": "",
+            "repoPath": [{"front":"https://github.com/ju314ter/alsajuto_mobile"}, {"back":"https://github.com/Aninot/Alsatoju_Event_Node_API"}],
             "illustrationPath": [
                 "/projets/matcher.PNG",
                 "/projets/maquette.jpg",
@@ -143,11 +160,12 @@
             ],
             "tags": [
                 "react-native",
+                "react-native-animated",
                 "firebase",
                 "heroku",
                 "expo"
             ],
-            "description": "Dating app prototype based on gaming affinity. I used heroku for continuous delivery. Unmaintained"
+            "description": "Dating app prototype based on gaming affinity. Heroku PAAS for continuous delivery."
         },
         {
             "projectName": "DeliCat",
@@ -160,20 +178,7 @@
                 "wordpress",
                 "woocommerce"
             ],
-            "description": "Wordpress online shop for a gluten and lactose free bakery project"
-        },
-        {
-            "projectName": "Clientside manga reader/scrapper",
-            "projectSlug": "clientside-manga-scrapper",
-            "repoPath": "",
-            "illustrationPath": [
-                "/projets/jfworkshop.png"
-            ],
-            "tags": [
-                "angular",
-                "scrapping"
-            ],
-            "description": "Client side manga scrapper and online reader. Unmaintained"
+            "description": "Wordpress online shop concept for a gluten and lactose free bakery project"
         }
     ]
 }
