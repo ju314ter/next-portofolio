@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
 
 
-const ProjectDetailPage = ({project}) => {
+const ProjectDetailPage = ({project, onClose}) => {
     const getIllustrationsNodes = () => {
 
         let pagesArray = [];
@@ -15,11 +15,13 @@ const ProjectDetailPage = ({project}) => {
 
     }
     const [illustrationsNodes, setIllustrationsNodes] = useState([...getIllustrationsNodes()])
+    const [isFirstImageLoop, setIsFirstImageLoop] = useState(true)
     const [index, set] = useState(0)
     const onImageClick = useCallback((e) => {
         e.stopPropagation();
+        isFirstImageLoop === false ? onClose():
         set(state => (state + 1) % illustrationsNodes.length)
-    }, [])
+    }, [isFirstImageLoop])
     const transitions = useTransition(index, p => p, {
         from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
         enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
@@ -27,9 +29,8 @@ const ProjectDetailPage = ({project}) => {
     })
 
     useEffect(()=>{
-        console.log('illustration array : ', illustrationsNodes)
-    }, [illustrationsNodes])
-
+        illustrationsNodes.length - 1 === index ? setIsFirstImageLoop(false):null
+    },[index])
         return (
             <>
                 <div className="clickable">
@@ -39,10 +40,10 @@ const ProjectDetailPage = ({project}) => {
                     </div>
                 </div>
                 <div className="detail-page-content">
-                    <div className="carousel-detail-project" onClick={onImageClick}>
+                    <div className="carousel-detail-project" onClick={(e)=>(onImageClick(e))}>
                             {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
                                 return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
-                            }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}
+                            }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} /></animated.div>}
                     </div>
                 </div>
             </>

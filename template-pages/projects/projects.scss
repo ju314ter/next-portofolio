@@ -77,7 +77,7 @@ body.visible .canvas-wrapper-projects {
         display: flex;
         justify-content: center;
         align-items: center;
-        will-change: transform, opacity;
+        will-change: auto, opacity;
     }
     
     .clickable {

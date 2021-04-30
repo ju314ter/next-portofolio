@@ -38,29 +38,36 @@ const options = [
 ];
 
 export default withNavigationContext(({ fullpage }) => {
-  const isFirstLoad = useRef(true);
+  const isLoaded = useRef(true);
+  const starterDelay = 1000;
+  const [isFirstLoad, setIsFirstLoad] = useState(true)
   const animation = fullpage.navigation.animation || `foldOutAnimation`;
 
   useState(()=>{
-  },[])
+    console.log('fullpage did mount')
+    setTimeout(()=>{
+      setIsFirstLoad(false)
+    }, starterDelay)
+  },[starterDelay])
 
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={1000}
+      startup={isFirstLoad}
+      startupDelay={starterDelay}
       mobileTouch={false}
       animation={animation}
       className={`awesome-slider ${fullpage.navigation.slug}`}
       onTransitionEnd={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION END
-        if (isFirstLoad.current) {
+        if (isLoaded.current) {
           document.querySelector("body").classList.add("animated");
           document.querySelector("body").classList.add("visible");
         }
       }}
       onTransitionStart={() => {
         // HANDLE THE PAGE ELEMENTS ANIMATION ON FIRST TRANSITION START
-        if (isFirstLoad.current) {
+        if (isLoaded.current) {
           document.querySelector("body").classList.remove("animated");
           document.querySelector("body").classList.remove("visible");
         }

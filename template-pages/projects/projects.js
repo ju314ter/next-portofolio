@@ -21,11 +21,6 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
 
     const router = useRouter()
 
-    // useEffect(() => {
-    //   // Always do navigations after the first render
-    //   router.push('projects/?projectId=10', undefined, { shallow: true })
-    // }, [])
-
     const [selectedProject, setSelectedProject] = useState(null)
 
     const displaySelectedProject = async (project) => {
@@ -177,7 +172,7 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
                     {
                         selectedProject && (
                             <animated.div style={styleDetailPage} className={`detail-page-wrapper ${selectedProject.projectSlug}`} onClick={closeProjectDetail}>
-                                <ProjectDetailPage project={selectedProject}/>
+                                <ProjectDetailPage project={selectedProject} onClose={closeProjectDetail}/>
                             </animated.div>
                         )
                     }
