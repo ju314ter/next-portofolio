@@ -11,7 +11,6 @@ import cursusData from '../../data/cursus.json'
 export const CursusPage = withNavigationContext(({ fullpage }) => {
 
     const handleHeight = (height) => {
-        console.log(height)
     }
 
     return (

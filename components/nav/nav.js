@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
+import React, { useState, useEffect, useCallback } from "react";
+import navigation, {
   withNavigationContext,
   Link
 } from "react-awesome-slider/dist/navigation";
@@ -14,29 +14,33 @@ const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;
   const [menuVisibility, setMenuVisibility] = useState(false);
   const [{ y, z, color }, set] = useSpring(() => ({ y: 0, z: 0, color: '#fff' }))
-
+  const [springTitreProps, setSpringTitre] = useSpring(()=>({ x: 0, height: 80, opacity: 1}))
+  
   useEffect(() => {
     switch (fullpage.navigation.slug) {
-      case '': set({ color: '#fff' });
+      case '': set({ color: '#fff'});
       break;
-      case 'projects': set({ color: '#fff' });
+      case 'projects': set({ color: '#fff'});
       break;
-      case 'cursus': set({ color: '#000' });
+      case 'cursus': set({ color: '#000'});
       break;
-      case 'contact': set({ color: '#fff' });
+      case 'contact': set({ color: '#fff'});
       break;
     }
+
     return () => {
 
     }
-  }, [fullpage])
+  }, [fullpage.navigation.slug])
 
   return (
     <>
       <header className="page-header">
-        <div className="logo">
+        <div className="logo" onClick={()=>{}}>
           <Link href='/'><ReactLogo /></Link>
-          <animated.p style={{ color: color }} className="logo-titre">Workshop</animated.p>
+          <div style={{overflow:"hidden"}}>
+            <animated.p style={{ color: color }} className='logo-titre animated-text-entry'>{fullpage.navigation.slug}</animated.p>
+          </div>
         </div>
         <div className="menu" onClick={() => {
           setMenuVisibility(!menuVisibility);
