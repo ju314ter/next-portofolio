@@ -33,6 +33,7 @@ const ProjectGrid = (properties) => {
             const top = (heights[column] += projectHeight + 25) - projectHeight + 25 // y = it's just the height of the current column
             return { ...child, left, top, width: width / columns, height: projectHeight + 25 }
         })
+        console.log(heights)
         return [heights, gridItems]
     }, [columns, items, width, projectHeight])
 
@@ -40,9 +41,9 @@ const ProjectGrid = (properties) => {
         gridItems,
         (item: { projectName: string; height: number; width: number; left: number; top: number; }) => item.projectName,
         {
-            from: ({ left, top, width, height }) => ({ left, top, width, height, opacity: 0 }),
-            enter: ({ left, top, width, height }) => ({ left, top, width, height, opacity: 1 }),
-            update: ({ left, top, width, height }) => ({ left, top, width, height }),
+            from: ({ left = 0, top, width, height = 0 }) => ({ left, top, width, height, opacity: 0 }),
+            enter: ({ left = 0, top, width, height = 0 }) => ({ left, top, width, height, opacity: 1 }),
+            update: ({ left = 0, top, width, height = 0 }) => ({ left, top, width, height }),
             leave: { height: 0, opacity: 0 },
             config: { mass: 5, tension: 500, friction: 100 },
             trail: 25
@@ -88,28 +89,32 @@ const ProjectGrid = (properties) => {
         properties.selectedProject(project)
     }
 
-    return (
-        <>
-            <div className="tags-section">
-                {tagsArray && tagsArray.map((tag, i)=>{
-                    return <GridTag key={i+tag} index={i} selected={selectedTags.includes(tag)} tag={tag} onTagClick={()=>(toggle(tag))} />
-                })}
-            </div>
-            <div ref={ref} className="grid" style={{ height: Math.max(...heights) }}>
-                {transitions.map(({ item, key, props },i) => {
-                    return (
-                        <a.div
-                            key={key + '-' + i}
-                            className="animated-item-wrapper"
-                            style={{ ...props }}
-                        >
-                            <Project onClick={handleProject} project={item} />
-                        </a.div>
-                    )
-                })}
-            </div>
-        </>
-    );
+    if(!isFinite(Math.max(...heights))) { return null } else {
+
+        return (
+            <>
+                <div className="tags-section">
+                    {tagsArray && tagsArray.map((tag, i)=>{
+                        return <GridTag key={i+tag} index={i} selected={selectedTags.includes(tag)} tag={tag} onTagClick={()=>(toggle(tag))} />
+                    })}
+                </div>
+                <div ref={ref} className="grid" style={{ height: Math.max(...heights) || 0 }}>
+                    {transitions.map(({ item, key, props },i) => {
+                        return (
+                            <a.div
+                                key={key + '-' + i}
+                                className="animated-item-wrapper"
+                                style={{ ...props }}
+                            >
+                                <Project onClick={handleProject} project={item} />
+                            </a.div>
+                        )
+                    })}
+                </div>
+            </>
+        );
+    }
+
 };
 
 export default ProjectGrid;

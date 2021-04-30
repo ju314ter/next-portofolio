@@ -42,7 +42,7 @@ const ProjectDetailPage = ({project, onClose}) => {
                 <div className="detail-page-content">
                     <div className="carousel-detail-project" onClick={(e)=>(onImageClick(e))}>
                             {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
-                                return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
+                                return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]}/></div></animated.div>
                             }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} /></animated.div>}
                     </div>
                 </div>
