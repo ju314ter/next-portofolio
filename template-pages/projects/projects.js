@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import { useRouter } from "next/router";
@@ -16,6 +16,9 @@ import { animated, useSpring } from "react-spring";
 
 export const ProjectsPage = withNavigationContext(({ fullpage }) => {
 
+    const controlArrows = useRef(null)
+    const logoTitre = useRef(null)
+
     const [projects, setProjects] = useState(projectsData.realisations)
     const [ref, bounds] = useMeasure();
 
@@ -27,19 +30,29 @@ export const ProjectsPage = withNavigationContext(({ fullpage }) => {
         await router.push(`projects?projectId=${project.projectSlug}`, undefined, { shallow: true })
         await setDetailPageAnim({opacity:1,bottom:'0'})
         await setProjectGridAnim({opacity:0})
+        await controlArrows.current.classList.add("hide");
+        await logoTitre.current.classList.add("hide");
     }
     const closeProjectDetail = async () => {
         await router.push('projects', undefined, { shallow: true })
         await setDetailPageAnim({opacity:0,bottom:'-100vh'})
         await setProjectGridAnim({opacity:1})
+        await controlArrows.current.classList.remove("hide");
+        await logoTitre.current.classList.remove("hide");
     }
   
     useEffect(() => {
       const { projectId } = router.query 
+      controlArrows.current = document.querySelector('.awssld__controls')
+      logoTitre.current = document.querySelector('.logo-titre')
+
       projectId ? (setSelectedProject(...projects.filter((el)=>(el.projectSlug === projectId)))
                   ,setDetailPageAnim({opacity:1,bottom:'0'})
-                  ,setProjectGridAnim({opacity:0}))
+                  ,setProjectGridAnim({opacity:0})
+                  ,controlArrows.current.classList.add("hide")
+                  ,logoTitre.current.classList.add("hide"))
                   :setSelectedProject(null)
+
     }, [router.query.projectId])
 
     const [styleDetailPage, setDetailPageAnim] = useSpring(()=>({opacity: 0, bottom :'-100vh' }))

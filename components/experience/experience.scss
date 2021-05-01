@@ -6,6 +6,7 @@
     flex: 1 0 300px;
     max-width: 40vw;
     min-width: 420px;
+    min-height: 420px;
     background: #fafafaaa;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -33,7 +34,12 @@
 
     @media (max-width:768px) {
         min-width: 320px;
+        min-height: 320px;
         left: 0;
+
+        h2 {
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -68,10 +74,15 @@
 
 .type-experience-wrapper {
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     
     .type-experience {
         padding: 10px;
         margin: 10px;
+        flex: 0 0 auto;
         background-image: linear-gradient(135deg, #C60 10%, #C93 100%);
         color: white;
         border-radius: 5px;
@@ -102,5 +113,9 @@
         font-size: 1.5rem;
         padding: 5px;
         font-weight: 300;
+
+        @media (max-width:768px) {
+            font-size: 1.2rem;
+        }
     }
 }

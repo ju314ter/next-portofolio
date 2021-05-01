@@ -40,15 +40,7 @@ const options = [
 export default withNavigationContext(({ fullpage }) => {
   const isLoaded = useRef(true);
   const starterDelay = 1000;
-  const [isFirstLoad, setIsFirstLoad] = useState(true)
   const animation = fullpage.navigation.animation || `foldOutAnimation`;
-
-  useState(()=>{
-    console.log('fullpage did mount')
-    setTimeout(()=>{
-      setIsFirstLoad(false)
-    }, starterDelay)
-  },[starterDelay])
 
   return (
     <Slider
