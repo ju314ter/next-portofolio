@@ -22,6 +22,7 @@
         {
             "projectName": "Portfolio v2",
             "projectSlug": "portfolio-v-2",
+            "directUrl": "https://julienfeger.com",
             "repoPath": "https://github.com/ju314ter/next-portofolio",
             "illustrationPath": [
                 "/projets/JFWP.JPG",
@@ -63,7 +64,7 @@
             "projectName": "Catalogue App",
             "projectSlug": "catalogue-app",
             "portrait": true,
-            "repoPath": "",
+            "repoPath": "https://github.com/ju314ter/CatalogueApp",
             "illustrationPath": [
                 "/projets/patisserie2.PNG",
                 "/projets/patisserie1.PNG"
@@ -77,7 +78,7 @@
         {
             "projectName": "TFT wiki",
             "projectSlug": "tft-wiki-app",
-            "repoPath": "",
+            "repoPath": "https://github.com/ju314ter/TFT-Helpers-React-native",
             "portrait": true,
             "illustrationPath": [
                 "/projets/tft1.jpg",

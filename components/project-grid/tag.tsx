@@ -11,7 +11,7 @@ const GridTag = ({selected, tag, onTagClick, index}) => {
         <Button key={tag + '-' + index} 
             className={`tag-button ${tag}`} 
             onClick={onTagClick}
-            endIcon={tag!=='Randomize' && (<a.span style={style} className='tag-button-remove' onClick={onTagClick}><CancelIcon /></a.span>) }
+            endIcon={tag!=='Randomize' && (<a.span style={style} className='tag-button-remove'><CancelIcon/></a.span>) }
             style={tag ==='Randomize' ? {backgroundImage: 'linear-gradient(135deg, #3B2667 10%, #EC7878 100%)'}: null}>
             <span className='tag-button-content'>{tag}</span>
         </Button>

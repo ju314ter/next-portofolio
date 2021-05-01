@@ -1,8 +1,13 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
+import Github from '../../public/socialicons/github.svg';
+import { useRouter } from 'next/router'
+
 
 
 const ProjectDetailPage = ({project, onClose}) => {
+
+    const router = useRouter();
     const getIllustrationsNodes = () => {
 
         let pagesArray = [];
@@ -29,15 +34,25 @@ const ProjectDetailPage = ({project, onClose}) => {
     })
 
     useEffect(()=>{
+    //    console.log(project.repoPath)
+    }, [project])
+
+    useEffect(()=>{
         illustrationsNodes.length - 1 === index ? setIsFirstImageLoop(false):null
     },[index])
         return (
             <>
                 <div className="clickable">
+                    {project.repoPath && <div className="github-button">
+                        <a href={project.repoPath}><Github/></a>
+                    </div>}
                     <div className="chevron-bottom-wrapper">
                         <div className="chevron-left"></div>
                         <div className="chevron-right"></div>
                     </div>
+                    {project.directUrl && <div className="live-button" onClick={()=>{router.push(project.directUrl)}}>
+                        <span>Live</span>
+                    </div>}
                 </div>
                 <div className="detail-page-content">
                     <div className="carousel-detail-project" onClick={(e)=>(onImageClick(e))}>
