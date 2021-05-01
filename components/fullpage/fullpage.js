@@ -53,7 +53,6 @@ export default withNavigationContext(({ fullpage }) => {
   return (
     <Slider
       startupScreen={<Startup />}
-      startup={isFirstLoad}
       startupDelay={starterDelay}
       mobileTouch={false}
       animation={animation}

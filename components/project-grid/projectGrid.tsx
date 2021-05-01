@@ -33,7 +33,6 @@ const ProjectGrid = (properties) => {
             const top = (heights[column] += projectHeight + 25) - projectHeight + 25 // y = it's just the height of the current column
             return { ...child, left, top, width: width / columns, height: projectHeight + 25 }
         })
-        console.log(heights)
         return [heights, gridItems]
     }, [columns, items, width, projectHeight])
 
