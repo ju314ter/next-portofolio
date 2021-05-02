@@ -11,7 +11,8 @@ import GridTag from './tag'
 
 const ProjectGrid = (properties) => {
     const { containerBounds } = properties
-    const [projectHeight, setProjectHeight] = useState(containerBounds.height / 2);
+    const minColWidth = 420
+    const [projectHeight, setProjectHeight] = useState(containerBounds.height / 2)
     const [columns, setColumns] = useState(2)
     const [ref, { width }] = useMeasure()
     const formattedData: Array<any> = data.realisations
@@ -51,7 +52,7 @@ const ProjectGrid = (properties) => {
 
     useEffect(() => {
         setProjectHeight(containerBounds.height / 2)
-        setColumns(Math.floor(containerBounds.width / 420))
+        setColumns(Math.floor(containerBounds.width / minColWidth))
     }, [containerBounds, projectHeight])
 
     const toggle = (tag: string) => {
@@ -88,8 +89,19 @@ const ProjectGrid = (properties) => {
         properties.selectedProject(project)
     }
 
-    if(!isFinite(Math.max(...heights))) { return null } else {
-
+    if (!isFinite(Math.max(...heights))) { 
+        return (
+            containerBounds.width < minColWidth ?
+            items.map((item, index)=>{
+                return (
+                    <div key={'project-mobile-' + index}>
+                        <Project onClick={handleProject} project={item} />
+                    </div>
+                )
+            }) : null
+        ) 
+    }
+    else {
         return (
             <>
                 <div className="tags-section">
@@ -97,8 +109,10 @@ const ProjectGrid = (properties) => {
                         return <GridTag key={i+tag} index={i} selected={selectedTags.includes(tag)} tag={tag} onTagClick={()=>(toggle(tag))} />
                     })}
                 </div>
-                <div ref={ref} className="grid" style={{ height: Math.max(...heights) || 0 }}>
-                    {transitions.map(({ item, key, props },i) => {
+                <div ref={ref} className="grid" style={{ height: Math.max(...heights) || 'unset' }}>
+                    {console.log(containerBounds.width < 420)}
+                    { 
+                        transitions.map(({ item, key, props },i) => {
                         return (
                             <a.div
                                 key={key + '-' + i}
@@ -107,8 +121,8 @@ const ProjectGrid = (properties) => {
                             >
                                 <Project onClick={handleProject} project={item} />
                             </a.div>
-                        )
-                    })}
+                        )})
+                    }
                 </div>
             </>
         );
