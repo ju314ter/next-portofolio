@@ -35,7 +35,8 @@
                 "react",
                 "react-awesome-slider",
                 "react-spring",
-                "typescript"
+                "typescript",
+                "sass"
             ],
             "description": "Second version of my portfolio as a junior web developper."
         },
@@ -56,7 +57,8 @@
                 "Netlify",
                 "react-spring",
                 "graphQL",
-                "facebook api"
+                "facebook api",
+                "sass"
             ],
             "description": "Online website for Le Mans Glider association \"Les Ailes du Maine\""
         },
@@ -104,7 +106,8 @@
             "tags": [
                 "angular",
                 "NgRx",
-                "typescript"
+                "typescript",
+                "scss"
             ],
             "description": "Concept using NgRx store provider and angular drag and drop capabilities to create a website landing page builder. Output json config."
         },
@@ -151,7 +154,8 @@
             "tags": [
                 "angular",
                 "ngrx",
-                "typescript"
+                "typescript",
+                "scss"
             ],
             "description": "Projet d'entreprise en tant qu'alternant frontend"
         },
@@ -166,7 +170,8 @@
             "tags": [
                 "angular",
                 "ngrx",
-                "typescript"
+                "typescript",
+                "scss"
             ],
             "description": "Projet d'entreprise en tant qu'alternant frontend"
         },
