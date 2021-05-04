@@ -65,6 +65,7 @@
             "projectSlug": "catalogue-app",
             "portrait": true,
             "repoPath": "https://github.com/ju314ter/CatalogueApp",
+            "directUrl": "https://play.google.com/store/apps/details?id=com.catalogueapp",
             "illustrationPath": [
                 "/projets/patisserie2.PNG",
                 "/projets/patisserie1.PNG"
@@ -95,7 +96,8 @@
         {
             "projectName": "Landingpage builder",
             "projectSlug": "landingpage-builder",
-            "repoPath": "",
+            "repoPath": "https://github.com/ju314ter/angular-landing-page-builder",
+            "directUrl": "https://ju314ter.github.io/angular-landing-page-builder/",
             "illustrationPath": [
                 "/projets/lpbuilder.png"
             ],
@@ -105,6 +107,68 @@
                 "typescript"
             ],
             "description": "Concept using NgRx store provider and angular drag and drop capabilities to create a website landing page builder. Output json config."
+        },
+        {
+            "projectName": "Catch'up",
+            "projectSlug": "catchup-app",
+            "portrait": true,
+            "repoPath": [
+                {
+                    "front": "https://github.com/ju314ter/alsajuto_mobile"
+                },
+                {
+                    "back": "https://github.com/Aninot/Alsatoju_Event_Node_API"
+                }
+            ],
+            "illustrationPath": [
+                "/projets/matcher.PNG",
+                "/projets/maquette.jpg",
+                "/projets/mobilerendu0.png",
+                "/projets/mobilerendu1.png",
+                "/projets/mobilerendu3.png",
+                "/projets/itsamatch.PNG"
+            ],
+            "tags": [
+                "react-native",
+                "react-native-animated",
+                "firebase",
+                "heroku",
+                "expo"
+            ],
+            "description": "Dating app prototype based on gaming affinity. Heroku PAAS for continuous delivery."
+        },
+        {
+            "projectName": "Angular multimedia platform v2",
+            "projectSlug": "angular-multimedia-platform-v2",
+            "repoPath": "",
+            "illustrationPath": [
+                "/projets/cliq1.jpg",
+                "/projets/cliq2.jpg",
+                "/projets/cliq3.jpg",
+                "/projets/cliq4.jpg",
+                "/projets/cliq5.jpg"
+            ],
+            "tags": [
+                "angular",
+                "ngrx",
+                "typescript"
+            ],
+            "description": "Projet d'entreprise en tant qu'alternant frontend"
+        },
+        {
+            "projectName": "Angular multimedia platform v1",
+            "projectSlug": "angular-multimedia-platform-v1",
+            "repoPath": "",
+            "illustrationPath": [
+                "/projets/primezy.jpg",
+                "/projets/primezy1.jpg"
+            ],
+            "tags": [
+                "angular",
+                "ngrx",
+                "typescript"
+            ],
+            "description": "Projet d'entreprise en tant qu'alternant frontend"
         },
         {
             "projectName": "Mockup travel agency",
@@ -145,28 +209,6 @@
                 "buddypress"
             ],
             "description": "Wordpress concept to plan dinners at home with strangers in order to fight against social isolation"
-        },
-        {
-            "projectName": "Catch'up",
-            "projectSlug": "catchup-app",
-            "portrait": true,
-            "repoPath": [{"front":"https://github.com/ju314ter/alsajuto_mobile"}, {"back":"https://github.com/Aninot/Alsatoju_Event_Node_API"}],
-            "illustrationPath": [
-                "/projets/matcher.PNG",
-                "/projets/maquette.jpg",
-                "/projets/mobilerendu0.png",
-                "/projets/mobilerendu1.png",
-                "/projets/mobilerendu3.png",
-                "/projets/itsamatch.PNG"
-            ],
-            "tags": [
-                "react-native",
-                "react-native-animated",
-                "firebase",
-                "heroku",
-                "expo"
-            ],
-            "description": "Dating app prototype based on gaming affinity. Heroku PAAS for continuous delivery."
         },
         {
             "projectName": "DeliCat",
