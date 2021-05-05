@@ -134,7 +134,7 @@ export const ContactPage = withNavigationContext(({ fullpage }) => {
                     "retina_detect": true
                 }} />
             <div className="contact-wrapper">
-                <span style={{ fontSize: 25, fontFamily: 'Encode Sans', color: '#fafafa', margin: 25, textAlign: 'center' }}>Let's get to know each other !</span>
+                <span style={{ fontSize: 25, fontFamily: 'Encode Sans', color: '#fafafa', margin: 25, textAlign: 'center' }}>Apprenons à nous connaitre !</span>
                 <div className="icons">
                     <div className="icon-wrapper">
                         <a href="https://github.com/ju314ter"><Github /></a>

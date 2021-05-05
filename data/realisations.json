@@ -2,7 +2,7 @@
     "title": "Realisations personelles",
     "realisations": [
         {
-            "projectName": "Portfolio v1",
+            "projectName": "C.V en ligne",
             "projectSlug": "portfolio-v-1",
             "repoPath": "",
             "directUrl": "https://ju314ter.github.io/Curriculum-JF-V1/",
@@ -17,10 +17,10 @@
                 "jQuery",
                 "vanilla"
             ],
-            "description": "First online curriculum as an intern"
+            "description": "Curriculum en ligne pour ma recherche d'alternance"
         },
         {
-            "projectName": "Portfolio v2",
+            "projectName": "Portfolio",
             "projectSlug": "portfolio-v-2",
             "directUrl": "https://julienfeger.com",
             "repoPath": "https://github.com/ju314ter/next-portofolio",
@@ -33,12 +33,14 @@
             ],
             "tags": [
                 "react",
+                "nextJS",
+                "SSR",
                 "react-awesome-slider",
                 "react-spring",
                 "typescript",
                 "sass"
             ],
-            "description": "Second version of my portfolio as a junior web developper."
+            "description": "Premier portfolio en ligne en tant que développeur junior."
         },
         {
             "projectName": "Aile du Maine",
@@ -54,13 +56,14 @@
             "tags": [
                 "react",
                 "GatsbyJS",
+                "SSR",
                 "Netlify",
                 "react-spring",
                 "graphQL",
                 "facebook api",
                 "sass"
             ],
-            "description": "Online website for Le Mans Glider association \"Les Ailes du Maine\""
+            "description": "Website sous Gatsby pour l'association des \"Les Ailes du Maine\""
         },
         {
             "projectName": "Catalogue App",
@@ -74,9 +77,10 @@
             ],
             "tags": [
                 "react-native",
-                "headless CMS"
+                "headless CMS",
+                "mobile"
             ],
-            "description": "Catalogue application for assisting the salesforce of a bakery. Content is updated through datoCMS publishing. Unmaintained."
+            "description": "Catalogue réalisé pour assister les équipes de vente d'une boulangerie U via un présentoir disposant de l'application"
         },
         {
             "projectName": "TFT wiki",
@@ -91,9 +95,10 @@
             ],
             "tags": [
                 "react-native",
-                "expo"
+                "expo",
+                "mobile"
             ],
-            "description": "Wiki application about the riot game Teamfight Tactics"
+            "description": "Application style wiki pour le jeu vidéo Teamfight Tactics developpé par Riot Games"
         },
         {
             "projectName": "Landingpage builder",
@@ -109,7 +114,7 @@
                 "typescript",
                 "scss"
             ],
-            "description": "Concept using NgRx store provider and angular drag and drop capabilities to create a website landing page builder. Output json config."
+            "description": "Concept utilisant Ngrx et Angular afin de créer et d'éditer des landings pages via un fichier de configuration json"
         },
         {
             "projectName": "Catch'up",
@@ -134,11 +139,11 @@
             "tags": [
                 "react-native",
                 "react-native-animated",
-                "firebase",
+                "postgreSQL",
                 "heroku",
                 "expo"
             ],
-            "description": "Dating app prototype based on gaming affinity. Heroku PAAS for continuous delivery."
+            "description": "Prototype d'application de dating basé sur l'affinité au gaming. Heroku PAAS for continuous delivery."
         },
         {
             "projectName": "Angular multimedia platform v2",
@@ -150,22 +155,6 @@
                 "/projets/cliq3.jpg",
                 "/projets/cliq4.jpg",
                 "/projets/cliq5.jpg"
-            ],
-            "tags": [
-                "angular",
-                "ngrx",
-                "typescript",
-                "scss"
-            ],
-            "description": "Projet d'entreprise en tant qu'alternant frontend"
-        },
-        {
-            "projectName": "Angular multimedia platform v1",
-            "projectSlug": "angular-multimedia-platform-v1",
-            "repoPath": "",
-            "illustrationPath": [
-                "/projets/primezy.jpg",
-                "/projets/primezy1.jpg"
             ],
             "tags": [
                 "angular",
@@ -214,19 +203,6 @@
                 "buddypress"
             ],
             "description": "Wordpress concept to plan dinners at home with strangers in order to fight against social isolation"
-        },
-        {
-            "projectName": "DeliCat",
-            "projectSlug": "delicat-bakery-wordpress",
-            "repoPath": "",
-            "illustrationPath": [
-                "/projets/delicat.png"
-            ],
-            "tags": [
-                "wordpress",
-                "woocommerce"
-            ],
-            "description": "Wordpress online shop concept for a gluten and lactose free bakery project"
         }
     ]
 }
