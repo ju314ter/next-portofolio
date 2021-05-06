@@ -109,20 +109,21 @@ const ProjectGrid = (properties) => {
                         return <GridTag key={i+tag} index={i} selected={selectedTags.includes(tag)} tag={tag} onTagClick={()=>(toggle(tag))} />
                     })}
                 </div>
-                <div ref={ref} className="grid" style={{ height: Math.max(...heights) || 'unset' }}>
-                    {console.log(containerBounds.width < 420)}
-                    { 
-                        transitions.map(({ item, key, props },i) => {
-                        return (
-                            <a.div
-                                key={key + '-' + i}
-                                className="animated-item-wrapper"
-                                style={{ ...props }}
-                            >
-                                <Project onClick={handleProject} project={item} />
-                            </a.div>
-                        )})
-                    }
+                <div style={{ width: '100%', height: Math.max(...heights) + 100}}>
+                    <div ref={ref} className="grid">
+                        { 
+                            transitions.map(({ item, key, props },i) => {
+                            return (
+                                <a.div
+                                    key={key + '-' + i}
+                                    className="animated-item-wrapper"
+                                    style={{ ...props }}
+                                >
+                                    <Project onClick={handleProject} project={item} />
+                                </a.div>
+                            )})
+                        }
+                    </div>
                 </div>
             </>
         );

@@ -61,6 +61,33 @@ body.visible .canvas-wrapper-projects {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+
+    .nav-bullets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        margin: 5px;
+
+        .nav-bullet {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            background: grey;
+            margin: 10px;
+            
+            &:hover {
+                background: lightslategrey;
+            }
+
+            &.selected {
+                background: white;
+            }
+        }
     }
 
     .carousel-detail-project{
@@ -93,9 +120,11 @@ body.visible .canvas-wrapper-projects {
 
         .chevron-bottom-wrapper {
             width: 48px;
+            cursor: pointer;
             position: relative;
             height: 100%;
             margin: 0 20px;
+
             &:hover {
                 .chevron-left {
                     background: white;

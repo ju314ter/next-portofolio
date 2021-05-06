@@ -8,27 +8,6 @@ const Project = ({ project, onClick }) => {
 
     if (!project) { return null; }
 
-    const getIllustrationsNodes = () => {
-
-        let pagesArray = [];
-        if(project.illustrationPath) {
-            for (var i = 0, len = project.illustrationPath.length; i < len; i++) {
-                pagesArray.push(project.illustrationPath[i].toString())
-            }
-        }
-        return pagesArray
-
-    }
-    const [illustrationsNodes, setIllustrationsNodes] = useState(getIllustrationsNodes())
-
-    const [index, set] = useState(0)
-    const onImageClick = useCallback(() => set(state => (state + 1) % illustrationsNodes.length), [])
-    const transitions = useTransition(index, p => p, {
-        from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
-        enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-        leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
-    })
-
     const [open, toggle] = useState(false)
     const [ref, bounds] = useMeasure()
     const props = useSpring({ top: open ? 0 : bounds.height })
@@ -41,9 +20,7 @@ const Project = ({ project, onClick }) => {
                 onMouseEnter={() => { toggle(true) }}
                 onMouseLeave={() => { toggle(false) }}>
                 <div className="simple-trans-main">
-                    {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
-                        return <animated.div key={key} className="img-wrapper" style={props}><div className="img-wrapper" style={{ cursor: 'pointer' }}><img src={illustrationsNodes[item]} style={{ height: '100%' }} /></div></animated.div>
-                    }) : <animated.div className="img-wrapper"><img src={illustrationsNodes[0]} style={{ height: '100%' }} /></animated.div>}
+                    <div className="img-wrapper"><img src={project.illustrationPath[0]} style={{ height: '100%' }} /></div>
                 </div>
                 <div className="desc-wrapper" ref={ref}>
                     <h2 className="titre">{project.projectName}</h2>

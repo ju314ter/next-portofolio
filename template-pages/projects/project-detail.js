@@ -22,11 +22,13 @@ const ProjectDetailPage = ({project, onClose}) => {
     const [illustrationsNodes, setIllustrationsNodes] = useState([...getIllustrationsNodes()])
     const [isFirstImageLoop, setIsFirstImageLoop] = useState(true)
     const [index, set] = useState(0)
+
     const onImageClick = useCallback((e) => {
         e.stopPropagation();
         isFirstImageLoop === false ? onClose():
         set(state => (state + 1) % illustrationsNodes.length)
     }, [isFirstImageLoop])
+
     const transitions = useTransition(index, p => p, {
         from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
         enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
@@ -40,6 +42,7 @@ const ProjectDetailPage = ({project, onClose}) => {
     useEffect(()=>{
         illustrationsNodes.length - 1 === index ? setIsFirstImageLoop(false):null
     },[index])
+
         return (
             <>
                 <div className="clickable">
@@ -55,6 +58,11 @@ const ProjectDetailPage = ({project, onClose}) => {
                     </div>}
                 </div>
                 <div className="detail-page-content">
+                    <div className='nav-bullets'>
+                        {illustrationsNodes.length > 1 && illustrationsNodes.map((el, i)=>(
+                        <span onClick={(e) => { e.stopPropagation(); return set(i)}} className={index === i ? 'nav-bullet selected': 'nav-bullet'}/>
+                        ))}
+                    </div>
                     <div className="carousel-detail-project" onClick={(e)=>(onImageClick(e))}>
                             {illustrationsNodes.length > 1 ? transitions.map(({ item, props, key }) => {
                                 return <animated.div key={key} className="img-wrapper" style={{...props,cursor: 'pointer'}}><img src={illustrationsNodes[item]}/></animated.div>
